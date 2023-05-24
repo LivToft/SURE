@@ -1,0 +1,20 @@
+minimization of solvent
+ &cntrl
+  imin = 1,
+  maxcyc = 1000,   
+  ncyc = 200,
+  cut=10.0,
+  ntb=1,
+  ntc=2,
+  ntf=2,
+  ifqnt=1
+ /
+ &qmmm
+  qmmask=':613-791',
+  qmcharge=6,
+  qm_theory='PM3',
+  qmshake=1,
+  qm_ewald=1,
+  qm_pme=1
+ /
+  
