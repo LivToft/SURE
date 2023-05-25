@@ -1,0 +1,9 @@
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+3p5r=loadpdb 3p5r_corrected.pdb
+saveAmberParm 3p5r 3p5r_gas.prmtop 3p5r_gas.inpcrd
+addIons 3p5r Na+ 15
+solvateOct 3p5r TIP3PBOX 10.0
+addIonsRand 3p5r Na+ 128 Cl- 128
+saveAmberParm 3p5r 3p5r_ion.prmtop 3p5r_ion.inpcrd
+quit

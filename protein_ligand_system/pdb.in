@@ -1,0 +1,3 @@
+trajin 3p5r_FGP.inpcrd
+trajout 3p5r_FGP_wions_water.pdb PDB
+run

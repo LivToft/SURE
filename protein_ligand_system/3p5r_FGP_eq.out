@@ -1,0 +1,1568 @@
+
+          -------------------------------------------------------
+          Amber 22 SANDER                              2022
+          -------------------------------------------------------
+
+| Run on 05/17/2023 at 15:28:56
+
+|   Executable path: sander
+| Working directory: /Users/livtoft/Desktop/SURE
+|          Hostname: Unknown
+  [-O]verwriting output
+
+File Assignments:
+|  MDIN: eq.in                                                                 
+| MDOUT: 3p5r_FGP_eq.out                                                       
+|INPCRD: 3p5r_FGP_min.ncrst                                                    
+|  PARM: 3p5r_FGP.prmtop                                                       
+|RESTRT: 3p5r_FGP_eq.rst                                                       
+|  REFC: refc                                                                  
+| MDVEL: mdvel                                                                 
+| MDFRC: mdfrc                                                                 
+|  MDEN: mden                                                                  
+| MDCRD: 3p5r_FGP_eq.nc                                                        
+|MDINFO: mdinfo                                                                
+|  MTMD: mtmd                                                                  
+|INPDIP: inpdip                                                                
+|RSTDIP: rstdip                                                                
+|INPTRA: inptraj                                                               
+
+
+ Here is the input file:
+
+Initial MD equilibration                                                       
+ &cntrl                                                                        
+  imin=0, irest=0,                                                             
+  nstlim=1000,dt=0.001, ntc=1,                                                 
+  ntpr=20, ntwx=20,                                                            
+  cut=16, ntb=0, igb=1,                                                        
+  ntt=3, gamma_ln=1.0,                                                         
+  tempi=0.0, temp0=300.0,                                                      
+ &end                                                                          
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+| Flags:                                                                        
+| New format PARM file being parsed.
+| Version =    1.000 Date = 05/17/23 Time = 13:48:36
+ NATOM  =   12654 NTYPES =      18 NBONH =    6259 MBONA  =    6542
+ NTHETH =   14217 MTHETA =    8867 NPHIH =   28032 MPHIA  =   21951
+ NHPARM =       0 NPARM  =       0 NNB   =   69858 NRES   =     791
+ NBONA  =    6542 NTHETA =    8867 NPHIA =   21951 NUMBND =      57
+ NUMANG =     122 NPTRA  =      54 NATYP =      41 NPHB   =       0
+ IFBOX  =       0 NMXRS  =      65 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+ Implicit solvent radii are modified Bondi radii (mbondi)                                                   
+
+|     Memory Use     Allocated
+|     Real             1427271
+|     Hollerith          38755
+|     Integer           694423
+|     Max Pairs              1
+|     nblistReal             0
+|     nblist Int             0
+|       Total            14014 kbytes
+
+| Note: 1-4 EEL scale factors are being read from the topology file.
+
+| Note: 1-4 VDW scale factors are being read from the topology file.
+| Duplicated    0 dihedrals
+| Duplicated    0 dihedrals
+
+--------------------------------------------------------------------------------
+   2.  CONTROL  DATA  FOR  THE  RUN
+--------------------------------------------------------------------------------
+
+default_name                                                                    
+
+General flags:
+     imin    =       0, nmropt  =       0
+
+Nature and format of input:
+     ntx     =       1, irest   =       0, ntrx    =       1
+
+Nature and format of output:
+     ntxo    =       2, ntpr    =      20, ntrx    =       1, ntwr    =    1000
+     iwrap   =       0, ntwx    =      20, ntwv    =       0, ntwe    =       0
+     ioutfm  =       1, ntwprt  =       0, idecomp =       0, rbornstat=      0
+
+Potential function:
+     ntf     =       1, ntb     =       0, igb     =       1, nsnb    =      25
+     ipol    =       0, gbsa    =       0, iesp    =       0
+     dielc   =   1.00000, cut     =  16.00000, intdiel =   1.00000
+     saltcon =   0.00000, offset  =   0.09000, gbalpha=    1.00000
+     gbbeta  =   0.00000, gbgamma =   0.00000, surften =   0.00500
+     rdt     =   0.00000, rgbmax  =  25.00000  extdiel =  78.50000
+     alpb  =        0
+
+Frozen or restrained atoms:
+     ibelly  =       0, ntr     =       0
+
+Molecular dynamics:
+     nstlim  =      1000, nscm    =      1000, nrespa  =         1
+     t       =   0.00000, dt      =   0.00100, vlimit  =  20.00000
+
+Langevin dynamics temperature regulation:
+     ig      =   71277
+     temp0   = 300.00000, tempi   =   0.00000, gamma_ln=   1.00000
+|  INFO: Old style inpcrd file read
+
+
+--------------------------------------------------------------------------------
+   3.  ATOMIC COORDINATES AND VELOCITIES
+--------------------------------------------------------------------------------
+
+default_name                                                                    
+ begin time read from input coords =     0.000 ps
+
+ Number of triangulated 3-point waters found:        0
+
+--------------------------------------------------------------------------------
+   4.  RESULTS
+--------------------------------------------------------------------------------
+
+|  # of SOLUTE  degrees of freedom (RNDFP):   37962.
+|  # of SOLVENT degrees of freedom (RNDFS):       0.
+|  NDFMIN =   37962.     NUM_NOSHAKE =      0     CORRECTED RNDFP =   37962.
+|  TOTAL # of degrees of freedom (RNDF) =   37962.
+
+ NSTEP =        0   TIME(PS) =       0.000  TEMP(K) =     0.00  PRESS =     0.0
+ Etot   =    -31071.6963  EKtot   =         0.0000  EPtot      =    -31071.6963
+ BOND   =       456.8886  ANGLE   =      1614.1947  DIHED      =      7613.4667
+ 1-4 NB =      2684.4335  1-4 EEL =     31238.9143  VDWAALS    =     -7392.6194
+ EELEC  =    -56021.1019  EGB     =    -11265.8727  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+
+ NSTEP =       20   TIME(PS) =       0.020  TEMP(K) =     9.09  PRESS =     0.0
+ Etot   =    -30718.0740  EKtot   =       342.7777  EPtot      =    -31060.8517
+ BOND   =       539.8577  ANGLE   =      1751.8885  DIHED      =      7638.0827
+ 1-4 NB =      2695.0501  1-4 EEL =     31041.4830  VDWAALS    =     -7395.8098
+ EELEC  =    -56041.4002  EGB     =    -11290.0037  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step     20; vmax =   205.8992
+vlimit exceeded for step     23; vmax =    26.3433
+vlimit exceeded for step     24; vmax =    24.9265
+vlimit exceeded for step     25; vmax =    20.7185
+vlimit exceeded for step     26; vmax =    23.7641
+vlimit exceeded for step     27; vmax =    20.3929
+vlimit exceeded for step     31; vmax =    24.3390
+vlimit exceeded for step     32; vmax =    20.8913
+vlimit exceeded for step     34; vmax =    34.3711
+vlimit exceeded for step     35; vmax =   508.7437
+vlimit exceeded for step     36; vmax =   287.1577
+vlimit exceeded for step     37; vmax =    20.1592
+vlimit exceeded for step     38; vmax =    22.5631
+vlimit exceeded for step     39; vmax =  5432.1605
+
+ NSTEP =       40   TIME(PS) =       0.040  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  46839892.6855  EPtot      =            NaN
+ BOND   =   2735589.4153  ANGLE   =    106944.8734  DIHED      =     12988.7140
+ 1-4 NB = **************  1-4 EEL =     31217.6976  VDWAALS    = **************
+ EELEC  =    -57143.3292  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step     40; vmax =   422.7269
+vlimit exceeded for step     50; vmax =    20.1188
+vlimit exceeded for step     51; vmax =    20.0988
+vlimit exceeded for step     52; vmax =    20.1238
+vlimit exceeded for step     53; vmax =    20.1204
+vlimit exceeded for step     54; vmax =    20.1484
+vlimit exceeded for step     55; vmax =    21.6845
+vlimit exceeded for step     56; vmax =   184.6327
+vlimit exceeded for step     57; vmax =   261.3356
+vlimit exceeded for step     58; vmax =   261.3047
+vlimit exceeded for step     59; vmax =   232.7736
+
+ NSTEP =       60   TIME(PS) =       0.060  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  54403613.2657  EPtot      =            NaN
+ BOND   = 103364831.7201  ANGLE   =    292545.2579  DIHED      =     19229.3603
+ 1-4 NB = **************  1-4 EEL =     29810.7170  VDWAALS    = **************
+ EELEC  =    -52679.0897  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step     60; vmax =   314.3540
+vlimit exceeded for step     61; vmax =  1190.7006
+vlimit exceeded for step     62; vmax =   439.3538
+vlimit exceeded for step     63; vmax = **********
+vlimit exceeded for step     64; vmax = **********
+vlimit exceeded for step     65; vmax = 89778.6310
+vlimit exceeded for step     66; vmax = **********
+vlimit exceeded for step     67; vmax = **********
+vlimit exceeded for step     68; vmax = **********
+vlimit exceeded for step     69; vmax = **********
+vlimit exceeded for step     70; vmax = **********
+vlimit exceeded for step     71; vmax = **********
+vlimit exceeded for step     72; vmax = **********
+vlimit exceeded for step     73; vmax = **********
+vlimit exceeded for step     74; vmax = **********
+vlimit exceeded for step     75; vmax = **********
+vlimit exceeded for step     76; vmax = **********
+vlimit exceeded for step     77; vmax = **********
+vlimit exceeded for step     78; vmax = **********
+vlimit exceeded for step     79; vmax = **********
+
+ NSTEP =       80   TIME(PS) =       0.080  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  51338326.4213  EPtot      =            NaN
+ BOND   = 326835175.5842  ANGLE   =    370659.2321  DIHED      =     21395.4052
+ 1-4 NB = **************  1-4 EEL =     27640.4691  VDWAALS    = **************
+ EELEC  =    -50090.9424  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step     80; vmax = 77943.7724
+vlimit exceeded for step     81; vmax = **********
+vlimit exceeded for step     82; vmax = **********
+vlimit exceeded for step     83; vmax = **********
+vlimit exceeded for step     84; vmax = **********
+vlimit exceeded for step     85; vmax = **********
+vlimit exceeded for step     86; vmax = **********
+vlimit exceeded for step     87; vmax = **********
+vlimit exceeded for step     88; vmax = 17609.0522
+vlimit exceeded for step     89; vmax = **********
+vlimit exceeded for step     90; vmax = **********
+vlimit exceeded for step     91; vmax = **********
+vlimit exceeded for step     92; vmax =  9978.9099
+vlimit exceeded for step     93; vmax = 15675.3891
+vlimit exceeded for step     94; vmax =  3657.7012
+vlimit exceeded for step     95; vmax =  7518.7872
+vlimit exceeded for step     96; vmax = **********
+vlimit exceeded for step     97; vmax =  1118.9280
+vlimit exceeded for step     98; vmax =  7442.8293
+vlimit exceeded for step     99; vmax = 18513.0856
+
+ NSTEP =      100   TIME(PS) =       0.100  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  49675973.9587  EPtot      =            NaN
+ BOND   = 371141326.0337  ANGLE   =    452786.3768  DIHED      =     22619.6290
+ 1-4 NB = **************  1-4 EEL =     24364.8517  VDWAALS    = **************
+ EELEC  =    -46356.4397  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    100; vmax = **********
+vlimit exceeded for step    101; vmax =  5773.9874
+vlimit exceeded for step    102; vmax =  9628.2526
+vlimit exceeded for step    103; vmax =  1158.8826
+vlimit exceeded for step    104; vmax =  1386.7768
+vlimit exceeded for step    105; vmax =  1158.8589
+vlimit exceeded for step    106; vmax =  1158.8836
+vlimit exceeded for step    107; vmax =  1751.3099
+vlimit exceeded for step    108; vmax =  1158.8750
+vlimit exceeded for step    109; vmax =  1158.8469
+vlimit exceeded for step    110; vmax =  1158.9045
+vlimit exceeded for step    111; vmax =  1158.8913
+vlimit exceeded for step    112; vmax =  1158.9574
+vlimit exceeded for step    113; vmax =  1158.8671
+vlimit exceeded for step    114; vmax =  4043.8780
+vlimit exceeded for step    115; vmax = 30776.4127
+vlimit exceeded for step    116; vmax =  1158.8758
+vlimit exceeded for step    117; vmax =  1158.8927
+vlimit exceeded for step    118; vmax =  1158.8818
+vlimit exceeded for step    119; vmax =  1158.9421
+
+ NSTEP =      120   TIME(PS) =       0.120  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  49444378.4575  EPtot      =            NaN
+ BOND   = 378433606.3144  ANGLE   =    483106.4784  DIHED      =     23501.3238
+ 1-4 NB = **************  1-4 EEL =     22546.5289  VDWAALS    = **************
+ EELEC  =    -43001.5875  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    120; vmax =  1158.8981
+vlimit exceeded for step    121; vmax =  1158.9218
+vlimit exceeded for step    122; vmax =  1158.8603
+vlimit exceeded for step    123; vmax =  1158.9719
+vlimit exceeded for step    124; vmax =  1158.9040
+vlimit exceeded for step    125; vmax = 24803.5815
+vlimit exceeded for step    126; vmax =  1158.8794
+vlimit exceeded for step    127; vmax =  1158.8825
+vlimit exceeded for step    128; vmax =  1158.8546
+vlimit exceeded for step    129; vmax =  1158.8925
+vlimit exceeded for step    130; vmax =  1158.9129
+vlimit exceeded for step    131; vmax =  1158.9563
+vlimit exceeded for step    132; vmax =  1158.9154
+vlimit exceeded for step    133; vmax =  1158.9269
+vlimit exceeded for step    134; vmax =  1158.8807
+vlimit exceeded for step    135; vmax =  1158.9048
+vlimit exceeded for step    136; vmax =  1158.9336
+vlimit exceeded for step    137; vmax =  1158.8895
+vlimit exceeded for step    138; vmax =  1158.8903
+vlimit exceeded for step    139; vmax =  1158.9144
+
+ NSTEP =      140   TIME(PS) =       0.140  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  49249699.3283  EPtot      =            NaN
+ BOND   = 384071526.2696  ANGLE   =    506251.6093  DIHED      =     24016.3567
+ 1-4 NB = **************  1-4 EEL =     21400.8045  VDWAALS    = **************
+ EELEC  =    -42320.0551  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    140; vmax =  1158.9155
+vlimit exceeded for step    141; vmax =  1158.8263
+vlimit exceeded for step    142; vmax =  1158.8782
+vlimit exceeded for step    143; vmax =  1158.9109
+vlimit exceeded for step    144; vmax =  1158.9092
+vlimit exceeded for step    145; vmax =  1158.9442
+vlimit exceeded for step    146; vmax =  1158.9031
+vlimit exceeded for step    147; vmax =  1158.8717
+vlimit exceeded for step    148; vmax =  1158.8935
+vlimit exceeded for step    149; vmax =  1158.8554
+vlimit exceeded for step    150; vmax =  1158.9281
+vlimit exceeded for step    151; vmax =  1158.9233
+vlimit exceeded for step    152; vmax =  1158.9263
+vlimit exceeded for step    153; vmax =  1158.8548
+vlimit exceeded for step    154; vmax =  1158.8974
+vlimit exceeded for step    155; vmax =  1158.8710
+vlimit exceeded for step    156; vmax =  1158.9278
+vlimit exceeded for step    157; vmax =  1158.8644
+vlimit exceeded for step    158; vmax =  1158.9581
+vlimit exceeded for step    159; vmax =  1158.8711
+
+ NSTEP =      160   TIME(PS) =       0.160  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  49356246.9857  EPtot      =            NaN
+ BOND   = 388233614.0155  ANGLE   =    526347.2230  DIHED      =     24689.6591
+ 1-4 NB = **************  1-4 EEL =     20522.2399  VDWAALS    = **************
+ EELEC  =    -40776.2983  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    160; vmax =  1158.8836
+vlimit exceeded for step    161; vmax =  1158.8252
+vlimit exceeded for step    162; vmax =  1158.9617
+vlimit exceeded for step    163; vmax =  1158.9004
+vlimit exceeded for step    164; vmax =  1158.9733
+vlimit exceeded for step    165; vmax =  1158.8722
+vlimit exceeded for step    166; vmax =  1158.9151
+vlimit exceeded for step    167; vmax =  1158.8634
+vlimit exceeded for step    168; vmax =  1158.8832
+vlimit exceeded for step    169; vmax =  1158.8747
+vlimit exceeded for step    170; vmax =  1158.9099
+vlimit exceeded for step    171; vmax =  1158.9213
+vlimit exceeded for step    172; vmax =  1158.9461
+vlimit exceeded for step    173; vmax =  1158.8988
+vlimit exceeded for step    174; vmax =  1158.9112
+vlimit exceeded for step    175; vmax =  1158.8832
+vlimit exceeded for step    176; vmax =  1158.8835
+vlimit exceeded for step    177; vmax =  1158.8866
+vlimit exceeded for step    178; vmax =  1158.8927
+vlimit exceeded for step    179; vmax =  1158.9193
+
+ NSTEP =      180   TIME(PS) =       0.180  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  49608184.8634  EPtot      =            NaN
+ BOND   = 391361314.5702  ANGLE   =    538450.9279  DIHED      =     25168.8752
+ 1-4 NB = **************  1-4 EEL =     19568.1975  VDWAALS    = **************
+ EELEC  =    -39747.9526  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    180; vmax =  1158.9312
+vlimit exceeded for step    181; vmax =  1158.9146
+vlimit exceeded for step    182; vmax =  1158.9274
+vlimit exceeded for step    183; vmax =  1158.9277
+vlimit exceeded for step    184; vmax =  1158.8887
+vlimit exceeded for step    185; vmax =  1158.8931
+vlimit exceeded for step    186; vmax =  1158.9425
+vlimit exceeded for step    187; vmax =  1158.9612
+vlimit exceeded for step    188; vmax =  1158.9050
+vlimit exceeded for step    189; vmax =  1158.9628
+vlimit exceeded for step    190; vmax =  1158.9404
+vlimit exceeded for step    191; vmax =  1158.9439
+vlimit exceeded for step    192; vmax =  1158.9027
+vlimit exceeded for step    193; vmax =  1158.9396
+vlimit exceeded for step    194; vmax =  1158.9370
+vlimit exceeded for step    195; vmax =  1158.9239
+vlimit exceeded for step    196; vmax =  1158.8688
+vlimit exceeded for step    197; vmax =  1158.9038
+vlimit exceeded for step    198; vmax =  1158.8647
+vlimit exceeded for step    199; vmax =  1158.8888
+
+ NSTEP =      200   TIME(PS) =       0.200  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  49790623.3595  EPtot      =            NaN
+ BOND   = 393895129.8408  ANGLE   =    548182.4300  DIHED      =     24874.6300
+ 1-4 NB = **************  1-4 EEL =     19135.7395  VDWAALS    = **************
+ EELEC  =    -39110.6377  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    200; vmax =  1158.9284
+vlimit exceeded for step    201; vmax =  1158.8803
+vlimit exceeded for step    202; vmax =  1158.8773
+vlimit exceeded for step    203; vmax =  1158.8294
+vlimit exceeded for step    204; vmax =  1158.9491
+vlimit exceeded for step    205; vmax =  1158.9384
+vlimit exceeded for step    206; vmax =  1158.8666
+vlimit exceeded for step    207; vmax =  1158.9076
+vlimit exceeded for step    208; vmax =  1158.9379
+vlimit exceeded for step    209; vmax =  1158.8672
+vlimit exceeded for step    210; vmax =  1158.9262
+vlimit exceeded for step    211; vmax =  1158.9645
+vlimit exceeded for step    212; vmax =  1158.8925
+vlimit exceeded for step    213; vmax =  1158.9355
+vlimit exceeded for step    214; vmax =  1158.8979
+vlimit exceeded for step    215; vmax =  1158.8900
+vlimit exceeded for step    216; vmax =  1158.8429
+vlimit exceeded for step    217; vmax =  1158.9200
+vlimit exceeded for step    218; vmax =  1158.9482
+vlimit exceeded for step    219; vmax =  1158.8857
+
+ NSTEP =      220   TIME(PS) =       0.220  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  49987111.4915  EPtot      =            NaN
+ BOND   = 396040565.5562  ANGLE   =    553800.0157  DIHED      =     25138.0197
+ 1-4 NB = **************  1-4 EEL =     18386.5210  VDWAALS    = **************
+ EELEC  =    -38198.4960  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    220; vmax =  1158.9109
+vlimit exceeded for step    221; vmax =  1158.9372
+vlimit exceeded for step    222; vmax =  1158.8381
+vlimit exceeded for step    223; vmax =  1158.9632
+vlimit exceeded for step    224; vmax =  1158.8936
+vlimit exceeded for step    225; vmax =  1158.9444
+vlimit exceeded for step    226; vmax =  1158.8579
+vlimit exceeded for step    227; vmax =  1158.9099
+vlimit exceeded for step    228; vmax =  1158.9763
+vlimit exceeded for step    229; vmax =  1158.9552
+vlimit exceeded for step    230; vmax =  1158.9177
+vlimit exceeded for step    231; vmax =  1158.8818
+vlimit exceeded for step    232; vmax =  1158.8725
+vlimit exceeded for step    233; vmax =  1158.9292
+vlimit exceeded for step    234; vmax =  1158.9548
+vlimit exceeded for step    235; vmax =  1158.9287
+vlimit exceeded for step    236; vmax =  1158.9609
+vlimit exceeded for step    237; vmax =  1158.9126
+vlimit exceeded for step    238; vmax =  1158.9620
+vlimit exceeded for step    239; vmax =  1158.9142
+
+ NSTEP =      240   TIME(PS) =       0.240  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  50109438.7277  EPtot      =            NaN
+ BOND   = 398007116.2900  ANGLE   =    560107.7524  DIHED      =     25145.1872
+ 1-4 NB = **************  1-4 EEL =     17945.8190  VDWAALS    = **************
+ EELEC  =    -37472.0434  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    240; vmax =  1158.9035
+vlimit exceeded for step    241; vmax =  1158.9141
+vlimit exceeded for step    242; vmax =  1158.9546
+vlimit exceeded for step    243; vmax =  1158.9406
+vlimit exceeded for step    244; vmax =  1158.8654
+vlimit exceeded for step    245; vmax =  1158.8901
+vlimit exceeded for step    246; vmax =  1158.9370
+vlimit exceeded for step    247; vmax =  1158.9312
+vlimit exceeded for step    248; vmax =  1158.8450
+vlimit exceeded for step    249; vmax =  1158.8514
+vlimit exceeded for step    250; vmax =  1158.8800
+vlimit exceeded for step    251; vmax =  1158.8967
+vlimit exceeded for step    252; vmax =  1158.9127
+vlimit exceeded for step    253; vmax =  1158.8830
+vlimit exceeded for step    254; vmax =  1158.8730
+vlimit exceeded for step    255; vmax =  1158.9054
+vlimit exceeded for step    256; vmax =  1158.9042
+vlimit exceeded for step    257; vmax =  1158.9299
+vlimit exceeded for step    258; vmax =  1158.9147
+vlimit exceeded for step    259; vmax =  1158.9157
+
+ NSTEP =      260   TIME(PS) =       0.260  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  50270405.8721  EPtot      =            NaN
+ BOND   = 399728629.2683  ANGLE   =    562617.3096  DIHED      =     25220.0038
+ 1-4 NB = **************  1-4 EEL =     17603.4810  VDWAALS    = **************
+ EELEC  =    -36818.3559  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    260; vmax =  1158.9259
+vlimit exceeded for step    261; vmax =  1158.8280
+vlimit exceeded for step    262; vmax =  1158.8778
+vlimit exceeded for step    263; vmax =  1158.9173
+vlimit exceeded for step    264; vmax =  1158.9369
+vlimit exceeded for step    265; vmax =  1158.9424
+vlimit exceeded for step    266; vmax =  1158.8767
+vlimit exceeded for step    267; vmax =  1158.8439
+vlimit exceeded for step    268; vmax =  1158.9335
+vlimit exceeded for step    269; vmax =  1158.8959
+vlimit exceeded for step    270; vmax =  1158.8725
+vlimit exceeded for step    271; vmax =  1158.9226
+vlimit exceeded for step    272; vmax =  1158.8457
+vlimit exceeded for step    273; vmax =  1158.9365
+vlimit exceeded for step    274; vmax =  1158.9687
+vlimit exceeded for step    275; vmax =  1158.8929
+vlimit exceeded for step    276; vmax =  1158.9210
+vlimit exceeded for step    277; vmax =  1158.9372
+vlimit exceeded for step    278; vmax =  1158.9804
+vlimit exceeded for step    279; vmax =  1158.9018
+
+ NSTEP =      280   TIME(PS) =       0.280  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  50404942.9553  EPtot      =            NaN
+ BOND   = 401301878.5017  ANGLE   =    567550.5222  DIHED      =     25361.5941
+ 1-4 NB = **************  1-4 EEL =     17001.9968  VDWAALS    = **************
+ EELEC  =    -36357.3145  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    280; vmax =  1158.9150
+vlimit exceeded for step    281; vmax =  1158.8937
+vlimit exceeded for step    282; vmax =  1158.9542
+vlimit exceeded for step    283; vmax =  1158.8554
+vlimit exceeded for step    284; vmax =  1158.8930
+vlimit exceeded for step    285; vmax =  1158.8798
+vlimit exceeded for step    286; vmax =  1158.9425
+vlimit exceeded for step    287; vmax =  1158.8902
+vlimit exceeded for step    288; vmax =  1158.9203
+vlimit exceeded for step    289; vmax =  1158.9246
+vlimit exceeded for step    290; vmax =  1158.8685
+vlimit exceeded for step    291; vmax =  1158.8895
+vlimit exceeded for step    292; vmax =  1158.8993
+vlimit exceeded for step    293; vmax =  1158.8926
+vlimit exceeded for step    294; vmax =  1158.9382
+vlimit exceeded for step    295; vmax =  1158.8743
+vlimit exceeded for step    296; vmax =  1158.9218
+vlimit exceeded for step    297; vmax =  1158.8995
+vlimit exceeded for step    298; vmax =  1158.9567
+vlimit exceeded for step    299; vmax =  1158.8997
+
+ NSTEP =      300   TIME(PS) =       0.300  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  50579000.8724  EPtot      =            NaN
+ BOND   = 402720413.4194  ANGLE   =    568015.8191  DIHED      =     25344.7212
+ 1-4 NB = **************  1-4 EEL =     16792.3918  VDWAALS    = **************
+ EELEC  =    -35762.2016  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    300; vmax =  1158.8878
+vlimit exceeded for step    301; vmax =  1158.8662
+vlimit exceeded for step    302; vmax =  1158.8950
+vlimit exceeded for step    303; vmax =  1158.9674
+vlimit exceeded for step    304; vmax =  1158.9717
+vlimit exceeded for step    305; vmax =  1158.9075
+vlimit exceeded for step    306; vmax =  1158.9163
+vlimit exceeded for step    307; vmax =  1158.9437
+vlimit exceeded for step    308; vmax =  1158.9320
+vlimit exceeded for step    309; vmax =  1158.9044
+vlimit exceeded for step    310; vmax =  1158.9300
+vlimit exceeded for step    311; vmax =  1158.8820
+vlimit exceeded for step    312; vmax =  1158.9374
+vlimit exceeded for step    313; vmax =  1158.9497
+vlimit exceeded for step    314; vmax =  1158.9034
+vlimit exceeded for step    315; vmax =  1158.8943
+vlimit exceeded for step    316; vmax =  1158.9139
+vlimit exceeded for step    317; vmax =  1158.9446
+vlimit exceeded for step    318; vmax =  1158.8544
+vlimit exceeded for step    319; vmax =  1158.9046
+
+ NSTEP =      320   TIME(PS) =       0.320  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  50907761.3040  EPtot      =            NaN
+ BOND   = 403951872.2274  ANGLE   =    571777.9673  DIHED      =     25273.2063
+ 1-4 NB = **************  1-4 EEL =     16453.1052  VDWAALS    = **************
+ EELEC  =    -35695.3400  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    320; vmax =  1158.9160
+vlimit exceeded for step    321; vmax =  1158.8881
+vlimit exceeded for step    322; vmax =  1158.9269
+vlimit exceeded for step    323; vmax =  1158.9081
+vlimit exceeded for step    324; vmax =  1158.8753
+vlimit exceeded for step    325; vmax =  1158.9533
+vlimit exceeded for step    326; vmax =  1158.9050
+vlimit exceeded for step    327; vmax =  1158.9258
+vlimit exceeded for step    328; vmax =  1158.9121
+vlimit exceeded for step    329; vmax =  1158.9000
+vlimit exceeded for step    330; vmax =  1158.8897
+vlimit exceeded for step    331; vmax =  1158.9206
+vlimit exceeded for step    332; vmax =  1158.8596
+vlimit exceeded for step    333; vmax =  1158.8596
+vlimit exceeded for step    334; vmax =  1158.9257
+vlimit exceeded for step    335; vmax =  1158.8482
+vlimit exceeded for step    336; vmax =  1158.8801
+vlimit exceeded for step    337; vmax =  1158.9175
+vlimit exceeded for step    338; vmax =  1158.9529
+vlimit exceeded for step    339; vmax =  1158.9115
+
+ NSTEP =      340   TIME(PS) =       0.340  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  51248627.3440  EPtot      =            NaN
+ BOND   = 405024342.0681  ANGLE   =    575522.9498  DIHED      =     25088.1323
+ 1-4 NB = **************  1-4 EEL =     16250.4656  VDWAALS    = **************
+ EELEC  =    -35321.4692  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    340; vmax =  1158.9085
+vlimit exceeded for step    341; vmax =  1158.8853
+vlimit exceeded for step    342; vmax =  1158.8730
+vlimit exceeded for step    343; vmax =  1158.8713
+vlimit exceeded for step    344; vmax =  1158.9111
+vlimit exceeded for step    345; vmax =  1158.8606
+vlimit exceeded for step    346; vmax =  1158.9511
+vlimit exceeded for step    347; vmax =  1158.9078
+vlimit exceeded for step    348; vmax =  1158.8948
+vlimit exceeded for step    349; vmax =  1158.8860
+vlimit exceeded for step    350; vmax =  1158.9945
+vlimit exceeded for step    351; vmax =  1158.9187
+vlimit exceeded for step    352; vmax =  1158.9311
+vlimit exceeded for step    353; vmax =  2144.4401
+vlimit exceeded for step    354; vmax =  1158.8958
+vlimit exceeded for step    355; vmax =  1158.8904
+vlimit exceeded for step    356; vmax =  1158.8703
+vlimit exceeded for step    357; vmax =  1158.8688
+vlimit exceeded for step    358; vmax =  1158.9041
+vlimit exceeded for step    359; vmax =  1158.8883
+
+ NSTEP =      360   TIME(PS) =       0.360  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  51466439.6538  EPtot      =            NaN
+ BOND   = 406027116.9944  ANGLE   =    577718.6130  DIHED      =     25142.1636
+ 1-4 NB = **************  1-4 EEL =     15873.6408  VDWAALS    = **************
+ EELEC  =    -35108.0112  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    360; vmax =  1158.8928
+vlimit exceeded for step    361; vmax =  1158.8663
+vlimit exceeded for step    362; vmax =  1158.8687
+vlimit exceeded for step    363; vmax =  1158.9009
+vlimit exceeded for step    364; vmax =  1158.9123
+vlimit exceeded for step    365; vmax =  1158.9359
+vlimit exceeded for step    366; vmax =  1158.9594
+vlimit exceeded for step    367; vmax =  1158.9522
+vlimit exceeded for step    368; vmax =  1158.9188
+vlimit exceeded for step    369; vmax =  1158.9583
+vlimit exceeded for step    370; vmax =  1158.8952
+vlimit exceeded for step    371; vmax =  1158.9384
+vlimit exceeded for step    372; vmax =  1158.9445
+vlimit exceeded for step    373; vmax =  1158.9117
+vlimit exceeded for step    374; vmax =  1158.8963
+vlimit exceeded for step    375; vmax =  1158.9184
+vlimit exceeded for step    376; vmax =  1158.9419
+vlimit exceeded for step    377; vmax =  1158.8621
+vlimit exceeded for step    378; vmax =  1158.9010
+vlimit exceeded for step    379; vmax =  1158.9133
+
+ NSTEP =      380   TIME(PS) =       0.380  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  51646020.4165  EPtot      =            NaN
+ BOND   = 406950123.6109  ANGLE   =    580365.4846  DIHED      =     24891.7622
+ 1-4 NB = **************  1-4 EEL =     15705.1916  VDWAALS    = **************
+ EELEC  =    -34554.3570  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    380; vmax =  1158.8975
+vlimit exceeded for step    381; vmax =  1158.8872
+vlimit exceeded for step    382; vmax =  1158.9426
+vlimit exceeded for step    383; vmax =  1158.9197
+vlimit exceeded for step    384; vmax =  1158.8880
+vlimit exceeded for step    385; vmax =  1158.9064
+vlimit exceeded for step    386; vmax =  1158.9128
+vlimit exceeded for step    387; vmax =  1158.9380
+vlimit exceeded for step    388; vmax =  1158.9589
+vlimit exceeded for step    389; vmax =  1158.9376
+vlimit exceeded for step    390; vmax =  1158.9036
+vlimit exceeded for step    391; vmax =  1158.9225
+vlimit exceeded for step    392; vmax =  1158.9392
+vlimit exceeded for step    393; vmax =  1158.9295
+vlimit exceeded for step    394; vmax =  1158.8692
+vlimit exceeded for step    395; vmax =  1158.9211
+vlimit exceeded for step    396; vmax =  1158.9128
+vlimit exceeded for step    397; vmax =  1159.0059
+vlimit exceeded for step    398; vmax =  1158.8995
+vlimit exceeded for step    399; vmax =  1158.9619
+
+ NSTEP =      400   TIME(PS) =       0.400  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  51871522.9466  EPtot      =            NaN
+ BOND   = 407779814.2680  ANGLE   =    579638.4267  DIHED      =     24705.3939
+ 1-4 NB = **************  1-4 EEL =     15653.7208  VDWAALS    = **************
+ EELEC  =    -34357.0590  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    400; vmax =  1158.9139
+vlimit exceeded for step    401; vmax =  1158.8700
+vlimit exceeded for step    402; vmax =  1158.9089
+vlimit exceeded for step    403; vmax =  1158.9071
+vlimit exceeded for step    404; vmax =  1158.9243
+vlimit exceeded for step    405; vmax =  1158.8937
+vlimit exceeded for step    406; vmax =  1158.8906
+vlimit exceeded for step    407; vmax =  1158.8745
+vlimit exceeded for step    408; vmax =  1158.8855
+vlimit exceeded for step    409; vmax =  1158.9603
+vlimit exceeded for step    410; vmax =  1158.9835
+vlimit exceeded for step    411; vmax =  1158.9522
+vlimit exceeded for step    412; vmax =  1158.9563
+vlimit exceeded for step    413; vmax =  1158.8785
+vlimit exceeded for step    414; vmax =  1158.9098
+vlimit exceeded for step    415; vmax =  1158.9143
+vlimit exceeded for step    416; vmax =  1158.9096
+vlimit exceeded for step    417; vmax =  1158.8800
+vlimit exceeded for step    418; vmax =  1158.9385
+vlimit exceeded for step    419; vmax =  1158.9046
+
+ NSTEP =      420   TIME(PS) =       0.420  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  52133699.1957  EPtot      =            NaN
+ BOND   = 408484347.3046  ANGLE   =    579516.9825  DIHED      =     24868.9495
+ 1-4 NB = **************  1-4 EEL =     15533.7434  VDWAALS    = **************
+ EELEC  =    -34410.9546  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    420; vmax =  1158.8987
+vlimit exceeded for step    421; vmax =  1158.9409
+vlimit exceeded for step    422; vmax =  1158.9030
+vlimit exceeded for step    423; vmax =  1158.9446
+vlimit exceeded for step    424; vmax =  1158.8468
+vlimit exceeded for step    425; vmax =  1158.9365
+vlimit exceeded for step    426; vmax =  1158.9427
+vlimit exceeded for step    427; vmax =  1158.9063
+vlimit exceeded for step    428; vmax =  1158.8790
+vlimit exceeded for step    429; vmax =  1158.9675
+vlimit exceeded for step    430; vmax =  1158.9541
+vlimit exceeded for step    431; vmax =  1158.8868
+vlimit exceeded for step    432; vmax =  1158.8757
+vlimit exceeded for step    433; vmax =  1158.9407
+vlimit exceeded for step    434; vmax =  1158.8719
+vlimit exceeded for step    435; vmax =  1158.9583
+vlimit exceeded for step    436; vmax =  1158.8787
+vlimit exceeded for step    437; vmax =  1158.8912
+vlimit exceeded for step    438; vmax =  1158.9465
+vlimit exceeded for step    439; vmax =  1158.8697
+
+ NSTEP =      440   TIME(PS) =       0.440  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  52404496.2388  EPtot      =            NaN
+ BOND   = 409071927.1934  ANGLE   =    578993.1503  DIHED      =     24734.5713
+ 1-4 NB = **************  1-4 EEL =     15479.4642  VDWAALS    = **************
+ EELEC  =    -34296.6215  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    440; vmax =  1158.9208
+vlimit exceeded for step    441; vmax =  1158.9185
+vlimit exceeded for step    442; vmax =  1158.9522
+vlimit exceeded for step    443; vmax =  1158.8721
+vlimit exceeded for step    444; vmax =  1158.9365
+vlimit exceeded for step    445; vmax =  1158.8980
+vlimit exceeded for step    446; vmax =  1158.8277
+vlimit exceeded for step    447; vmax =  1158.8921
+vlimit exceeded for step    448; vmax =  1158.8728
+vlimit exceeded for step    449; vmax =  1158.9314
+vlimit exceeded for step    450; vmax =  1158.8732
+vlimit exceeded for step    451; vmax =  1158.8960
+vlimit exceeded for step    452; vmax =  1158.8864
+vlimit exceeded for step    453; vmax =  1158.9217
+vlimit exceeded for step    454; vmax =  1158.8864
+vlimit exceeded for step    455; vmax =  1158.9323
+vlimit exceeded for step    456; vmax =  1158.8580
+vlimit exceeded for step    457; vmax =  1158.9001
+vlimit exceeded for step    458; vmax =  1158.9209
+vlimit exceeded for step    459; vmax =  1158.9152
+
+ NSTEP =      460   TIME(PS) =       0.460  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  52628861.6431  EPtot      =            NaN
+ BOND   = 409575179.8410  ANGLE   =    578858.6243  DIHED      =     24544.0207
+ 1-4 NB = **************  1-4 EEL =     15376.7105  VDWAALS    = **************
+ EELEC  =    -34219.1944  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    460; vmax =  1158.8430
+vlimit exceeded for step    461; vmax =  1158.8977
+vlimit exceeded for step    462; vmax =  1158.9167
+vlimit exceeded for step    463; vmax =  1158.9048
+vlimit exceeded for step    464; vmax =  1158.8992
+vlimit exceeded for step    465; vmax =  1159.0120
+vlimit exceeded for step    466; vmax =  1158.9109
+vlimit exceeded for step    467; vmax =  1159.0284
+vlimit exceeded for step    468; vmax =  1158.8733
+vlimit exceeded for step    469; vmax =  1158.9005
+vlimit exceeded for step    470; vmax =  1158.9205
+vlimit exceeded for step    471; vmax =  1158.9244
+vlimit exceeded for step    472; vmax =  1158.9331
+vlimit exceeded for step    473; vmax =  1158.8734
+vlimit exceeded for step    474; vmax =  1158.8981
+vlimit exceeded for step    475; vmax =  1158.9534
+vlimit exceeded for step    476; vmax =  1158.9504
+vlimit exceeded for step    477; vmax =  1158.8945
+vlimit exceeded for step    478; vmax =  1158.8217
+vlimit exceeded for step    479; vmax =  1158.9118
+
+ NSTEP =      480   TIME(PS) =       0.480  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  52842664.2831  EPtot      =            NaN
+ BOND   = 409991220.2734  ANGLE   =    579287.4492  DIHED      =     24483.0361
+ 1-4 NB = **************  1-4 EEL =     15230.3262  VDWAALS    = **************
+ EELEC  =    -34188.9182  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    480; vmax =  1158.9258
+vlimit exceeded for step    481; vmax =  1158.9266
+vlimit exceeded for step    482; vmax =  1158.9387
+vlimit exceeded for step    483; vmax =  1158.9101
+vlimit exceeded for step    484; vmax =  1158.9440
+vlimit exceeded for step    485; vmax =  1158.8894
+vlimit exceeded for step    486; vmax =  1158.8893
+vlimit exceeded for step    487; vmax =  1158.9232
+vlimit exceeded for step    488; vmax =  1158.9737
+vlimit exceeded for step    489; vmax =  1158.9454
+vlimit exceeded for step    490; vmax =  1158.9430
+vlimit exceeded for step    491; vmax =  1158.8824
+vlimit exceeded for step    492; vmax =  1158.8958
+vlimit exceeded for step    493; vmax =  1158.9000
+vlimit exceeded for step    494; vmax =  1158.9005
+vlimit exceeded for step    495; vmax =  1158.8955
+vlimit exceeded for step    496; vmax =  1158.9608
+vlimit exceeded for step    497; vmax =  1158.9126
+vlimit exceeded for step    498; vmax =  1158.9005
+vlimit exceeded for step    499; vmax =  1158.9500
+
+ NSTEP =      500   TIME(PS) =       0.500  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  53067429.0870  EPtot      =            NaN
+ BOND   = 410315523.2201  ANGLE   =    580455.1189  DIHED      =     24489.9661
+ 1-4 NB = **************  1-4 EEL =     15287.9746  VDWAALS    = **************
+ EELEC  =    -33996.2000  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    500; vmax =  1158.9255
+vlimit exceeded for step    501; vmax =  1158.8914
+vlimit exceeded for step    502; vmax =  1158.9194
+vlimit exceeded for step    503; vmax =  1158.8533
+vlimit exceeded for step    504; vmax =  1158.8920
+vlimit exceeded for step    505; vmax =  1158.8783
+vlimit exceeded for step    506; vmax =  1158.9020
+vlimit exceeded for step    507; vmax =  1158.8820
+vlimit exceeded for step    508; vmax =  1158.9131
+vlimit exceeded for step    509; vmax =  1158.9694
+vlimit exceeded for step    510; vmax =  1158.8944
+vlimit exceeded for step    511; vmax =  1158.9032
+vlimit exceeded for step    512; vmax =  1158.9130
+vlimit exceeded for step    513; vmax =  1158.8907
+vlimit exceeded for step    514; vmax =  1158.8856
+vlimit exceeded for step    515; vmax =  1158.9207
+vlimit exceeded for step    516; vmax =  1158.8887
+vlimit exceeded for step    517; vmax =  1158.8778
+vlimit exceeded for step    518; vmax =  1158.9021
+vlimit exceeded for step    519; vmax =  1158.9355
+
+ NSTEP =      520   TIME(PS) =       0.520  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  53203388.3445  EPtot      =            NaN
+ BOND   = 410572296.6441  ANGLE   =    579552.1931  DIHED      =     24361.5651
+ 1-4 NB = **************  1-4 EEL =     15141.4945  VDWAALS    = **************
+ EELEC  =    -33857.5279  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    520; vmax =  1158.9013
+vlimit exceeded for step    521; vmax =  1158.9331
+vlimit exceeded for step    522; vmax =  1158.9415
+vlimit exceeded for step    523; vmax =  1158.9367
+vlimit exceeded for step    524; vmax =  1158.9058
+vlimit exceeded for step    525; vmax =  1158.9034
+vlimit exceeded for step    526; vmax =  1158.8998
+vlimit exceeded for step    527; vmax =  1158.9692
+vlimit exceeded for step    528; vmax =  1158.8856
+vlimit exceeded for step    529; vmax =  1158.8995
+vlimit exceeded for step    530; vmax =  1158.8731
+vlimit exceeded for step    531; vmax =  1158.9174
+vlimit exceeded for step    532; vmax =  1158.9672
+vlimit exceeded for step    533; vmax =  1158.9752
+vlimit exceeded for step    534; vmax =  1158.8976
+vlimit exceeded for step    535; vmax =  1158.9044
+vlimit exceeded for step    536; vmax =  1158.9250
+vlimit exceeded for step    537; vmax =  1158.9441
+vlimit exceeded for step    538; vmax =  1158.9035
+vlimit exceeded for step    539; vmax =  1158.9209
+
+ NSTEP =      540   TIME(PS) =       0.540  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  53264530.2618  EPtot      =            NaN
+ BOND   = 410782755.5212  ANGLE   =    580119.1983  DIHED      =     24248.5052
+ 1-4 NB = **************  1-4 EEL =     15137.7309  VDWAALS    = **************
+ EELEC  =    -33897.5983  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    540; vmax =  1158.9076
+vlimit exceeded for step    541; vmax =  1158.9193
+vlimit exceeded for step    542; vmax =  1158.8687
+vlimit exceeded for step    543; vmax =  1158.9065
+vlimit exceeded for step    544; vmax =  1158.9375
+vlimit exceeded for step    545; vmax =  1158.9094
+vlimit exceeded for step    546; vmax =  1158.9182
+vlimit exceeded for step    547; vmax =  1158.9465
+vlimit exceeded for step    548; vmax =  1158.9231
+vlimit exceeded for step    549; vmax =  1158.8876
+vlimit exceeded for step    550; vmax =  1158.9573
+vlimit exceeded for step    551; vmax =  1158.8904
+vlimit exceeded for step    552; vmax =  1158.9612
+vlimit exceeded for step    553; vmax =  1158.8884
+vlimit exceeded for step    554; vmax =  1158.8987
+vlimit exceeded for step    555; vmax =  1158.9107
+vlimit exceeded for step    556; vmax =  1158.9232
+vlimit exceeded for step    557; vmax =  1158.9187
+vlimit exceeded for step    558; vmax =  1158.9187
+vlimit exceeded for step    559; vmax =  1158.9752
+
+ NSTEP =      560   TIME(PS) =       0.560  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  53317008.0740  EPtot      =            NaN
+ BOND   = 410989207.8202  ANGLE   =    581232.2581  DIHED      =     24166.3418
+ 1-4 NB = **************  1-4 EEL =     14974.4368  VDWAALS    = **************
+ EELEC  =    -33690.4429  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    560; vmax =  1158.8479
+vlimit exceeded for step    561; vmax =  1158.9582
+vlimit exceeded for step    562; vmax =  1158.8812
+vlimit exceeded for step    563; vmax =  1158.9805
+vlimit exceeded for step    564; vmax =  1158.9048
+vlimit exceeded for step    565; vmax =  1158.8865
+vlimit exceeded for step    566; vmax =  1158.9535
+vlimit exceeded for step    567; vmax =  1158.8985
+vlimit exceeded for step    568; vmax =  1158.8660
+vlimit exceeded for step    569; vmax =  1158.8920
+vlimit exceeded for step    570; vmax =  1158.9196
+vlimit exceeded for step    571; vmax =  1158.8640
+vlimit exceeded for step    572; vmax =  1158.8629
+vlimit exceeded for step    573; vmax =  1158.9515
+vlimit exceeded for step    574; vmax =  1158.9099
+vlimit exceeded for step    575; vmax =  1158.9392
+vlimit exceeded for step    576; vmax =  1158.8704
+vlimit exceeded for step    577; vmax =  1158.9114
+vlimit exceeded for step    578; vmax =  1158.8166
+vlimit exceeded for step    579; vmax =  1158.9007
+
+ NSTEP =      580   TIME(PS) =       0.580  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  53377541.8289  EPtot      =            NaN
+ BOND   = 411197719.2441  ANGLE   =    580840.0209  DIHED      =     24131.5612
+ 1-4 NB = **************  1-4 EEL =     14927.4316  VDWAALS    = **************
+ EELEC  =    -33630.1409  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    580; vmax =  1158.8917
+vlimit exceeded for step    581; vmax =  1158.9543
+vlimit exceeded for step    582; vmax =  1158.9520
+vlimit exceeded for step    583; vmax =  1158.8819
+vlimit exceeded for step    584; vmax =  1158.8898
+vlimit exceeded for step    585; vmax =  1158.8705
+vlimit exceeded for step    586; vmax =  1158.8314
+vlimit exceeded for step    587; vmax =  1158.9218
+vlimit exceeded for step    588; vmax =  1158.8489
+vlimit exceeded for step    589; vmax =  1158.8481
+vlimit exceeded for step    590; vmax =  1158.9214
+vlimit exceeded for step    591; vmax =  1158.9613
+vlimit exceeded for step    592; vmax =  1158.9354
+vlimit exceeded for step    593; vmax =  1158.9240
+vlimit exceeded for step    594; vmax =  1158.8621
+vlimit exceeded for step    595; vmax =  1158.9910
+vlimit exceeded for step    596; vmax =  1158.8681
+vlimit exceeded for step    597; vmax =  1158.9547
+vlimit exceeded for step    598; vmax =  1158.9192
+vlimit exceeded for step    599; vmax =  1158.8614
+
+ NSTEP =      600   TIME(PS) =       0.600  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  53440220.4549  EPtot      =            NaN
+ BOND   = 411400556.7372  ANGLE   =    581903.8155  DIHED      =     24024.0343
+ 1-4 NB = **************  1-4 EEL =     14953.2914  VDWAALS    = **************
+ EELEC  =    -33638.2884  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    600; vmax =  1158.9397
+vlimit exceeded for step    601; vmax =  1158.8974
+vlimit exceeded for step    602; vmax =  1158.9464
+vlimit exceeded for step    603; vmax =  1158.8937
+vlimit exceeded for step    604; vmax =  1158.9166
+vlimit exceeded for step    605; vmax =  1158.9493
+vlimit exceeded for step    606; vmax =  1158.9257
+vlimit exceeded for step    607; vmax =  1158.9773
+vlimit exceeded for step    608; vmax =  1158.8490
+vlimit exceeded for step    609; vmax =  1158.9018
+vlimit exceeded for step    610; vmax =  1158.8568
+vlimit exceeded for step    611; vmax =  1158.8590
+vlimit exceeded for step    612; vmax =  1158.9045
+vlimit exceeded for step    613; vmax =  1158.8863
+vlimit exceeded for step    614; vmax =  1158.9823
+vlimit exceeded for step    615; vmax =  1158.8574
+vlimit exceeded for step    616; vmax =  1158.8551
+vlimit exceeded for step    617; vmax =  1158.8765
+vlimit exceeded for step    618; vmax =  1158.8922
+vlimit exceeded for step    619; vmax =  1158.9352
+
+ NSTEP =      620   TIME(PS) =       0.620  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  53499887.8181  EPtot      =            NaN
+ BOND   = 411597303.3507  ANGLE   =    582361.6605  DIHED      =     23964.9531
+ 1-4 NB = **************  1-4 EEL =     14797.6531  VDWAALS    = **************
+ EELEC  =    -33603.5859  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    620; vmax =  1158.9251
+vlimit exceeded for step    621; vmax =  1158.8767
+vlimit exceeded for step    622; vmax =  1158.9202
+vlimit exceeded for step    623; vmax =  1158.8099
+vlimit exceeded for step    624; vmax =  1158.9003
+vlimit exceeded for step    625; vmax =  1158.8854
+vlimit exceeded for step    626; vmax =  1158.9041
+vlimit exceeded for step    627; vmax =  1158.8560
+vlimit exceeded for step    628; vmax =  1158.9152
+vlimit exceeded for step    629; vmax =  1158.8596
+vlimit exceeded for step    630; vmax =  1158.9126
+vlimit exceeded for step    631; vmax =  1158.9200
+vlimit exceeded for step    632; vmax =  1158.9027
+vlimit exceeded for step    633; vmax =  1158.9340
+vlimit exceeded for step    634; vmax =  1158.9331
+vlimit exceeded for step    635; vmax =  1158.9291
+vlimit exceeded for step    636; vmax =  1158.8737
+vlimit exceeded for step    637; vmax =  1158.9040
+vlimit exceeded for step    638; vmax =  1158.8900
+vlimit exceeded for step    639; vmax =  1158.9143
+
+ NSTEP =      640   TIME(PS) =       0.640  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  53551444.3410  EPtot      =            NaN
+ BOND   = 411789907.2911  ANGLE   =    581814.3145  DIHED      =     24034.7277
+ 1-4 NB = **************  1-4 EEL =     14805.4985  VDWAALS    = **************
+ EELEC  =    -33487.2895  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    640; vmax =  1158.9165
+vlimit exceeded for step    641; vmax =  1158.8697
+vlimit exceeded for step    642; vmax =  1158.8819
+vlimit exceeded for step    643; vmax =  1158.8774
+vlimit exceeded for step    644; vmax =  1158.8589
+vlimit exceeded for step    645; vmax =  1158.8759
+vlimit exceeded for step    646; vmax =  1158.8861
+vlimit exceeded for step    647; vmax =  1158.9198
+vlimit exceeded for step    648; vmax =  1158.9283
+vlimit exceeded for step    649; vmax =  1158.7600
+vlimit exceeded for step    650; vmax =  1158.8833
+vlimit exceeded for step    651; vmax =  1158.9245
+vlimit exceeded for step    652; vmax =  1158.9421
+vlimit exceeded for step    653; vmax =  1158.9353
+vlimit exceeded for step    654; vmax =  1158.8768
+vlimit exceeded for step    655; vmax =  1158.9089
+vlimit exceeded for step    656; vmax =  1158.8390
+vlimit exceeded for step    657; vmax =  1158.8799
+vlimit exceeded for step    658; vmax =  1158.8299
+vlimit exceeded for step    659; vmax =  1158.8756
+
+ NSTEP =      660   TIME(PS) =       0.660  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  53602692.6674  EPtot      =            NaN
+ BOND   = 411978008.2038  ANGLE   =    581390.6783  DIHED      =     24044.6366
+ 1-4 NB = **************  1-4 EEL =     14740.0966  VDWAALS    = **************
+ EELEC  =    -33417.7066  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    660; vmax =  1158.8360
+vlimit exceeded for step    661; vmax =  1158.9063
+vlimit exceeded for step    662; vmax =  1158.9223
+vlimit exceeded for step    663; vmax =  1158.8935
+vlimit exceeded for step    664; vmax =  1158.9476
+vlimit exceeded for step    665; vmax =  1158.8448
+vlimit exceeded for step    666; vmax =  1158.8929
+vlimit exceeded for step    667; vmax =  1158.8577
+vlimit exceeded for step    668; vmax =  1158.8818
+vlimit exceeded for step    669; vmax =  1158.9397
+vlimit exceeded for step    670; vmax =  1158.8869
+vlimit exceeded for step    671; vmax =  1158.9130
+vlimit exceeded for step    672; vmax =  1158.8638
+vlimit exceeded for step    673; vmax =  1158.8977
+vlimit exceeded for step    674; vmax =  1158.9219
+vlimit exceeded for step    675; vmax =  1158.8925
+vlimit exceeded for step    676; vmax =  1158.9132
+vlimit exceeded for step    677; vmax =  1158.9426
+vlimit exceeded for step    678; vmax =  1158.9056
+vlimit exceeded for step    679; vmax =  1158.8711
+
+ NSTEP =      680   TIME(PS) =       0.680  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  53668608.7201  EPtot      =            NaN
+ BOND   = 412160040.8385  ANGLE   =    581658.7461  DIHED      =     24027.0383
+ 1-4 NB = **************  1-4 EEL =     14747.4838  VDWAALS    = **************
+ EELEC  =    -33463.7854  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    680; vmax =  1158.9584
+vlimit exceeded for step    681; vmax =  1158.9296
+vlimit exceeded for step    682; vmax =  1158.8628
+vlimit exceeded for step    683; vmax =  1158.8714
+vlimit exceeded for step    684; vmax =  1158.9191
+vlimit exceeded for step    685; vmax =  1158.9098
+vlimit exceeded for step    686; vmax =  1158.9288
+vlimit exceeded for step    687; vmax =  1158.8333
+vlimit exceeded for step    688; vmax =  1158.8929
+vlimit exceeded for step    689; vmax =  1158.8902
+vlimit exceeded for step    690; vmax =  1158.9270
+vlimit exceeded for step    691; vmax =  1158.9367
+vlimit exceeded for step    692; vmax =  1158.8929
+vlimit exceeded for step    693; vmax =  1158.9079
+vlimit exceeded for step    694; vmax =  1158.8472
+vlimit exceeded for step    695; vmax =  1158.8786
+vlimit exceeded for step    696; vmax =  1158.9028
+vlimit exceeded for step    697; vmax =  1158.8469
+vlimit exceeded for step    698; vmax =  1158.8642
+vlimit exceeded for step    699; vmax =  1158.9229
+
+ NSTEP =      700   TIME(PS) =       0.700  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  53742152.2945  EPtot      =            NaN
+ BOND   = 412333248.7787  ANGLE   =    581904.8051  DIHED      =     23991.0644
+ 1-4 NB = **************  1-4 EEL =     14727.5862  VDWAALS    = **************
+ EELEC  =    -33421.0882  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    700; vmax =  1158.8626
+vlimit exceeded for step    701; vmax =  1158.9174
+vlimit exceeded for step    702; vmax =  1158.8927
+vlimit exceeded for step    703; vmax =  1158.8623
+vlimit exceeded for step    704; vmax =  1158.9569
+vlimit exceeded for step    705; vmax =  1158.8480
+vlimit exceeded for step    706; vmax =  1158.8704
+vlimit exceeded for step    707; vmax =  1158.9008
+vlimit exceeded for step    708; vmax =  1158.8549
+vlimit exceeded for step    709; vmax =  1158.8904
+vlimit exceeded for step    710; vmax =  1158.8934
+vlimit exceeded for step    711; vmax =  1158.9043
+vlimit exceeded for step    712; vmax =  1158.8823
+vlimit exceeded for step    713; vmax =  1158.9014
+vlimit exceeded for step    714; vmax =  1158.8993
+vlimit exceeded for step    715; vmax =  1158.8909
+vlimit exceeded for step    716; vmax =  1158.9121
+vlimit exceeded for step    717; vmax =  1158.8805
+vlimit exceeded for step    718; vmax =  1158.9374
+vlimit exceeded for step    719; vmax =  1158.9200
+
+ NSTEP =      720   TIME(PS) =       0.720  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  53831615.2724  EPtot      =            NaN
+ BOND   = 412480786.1118  ANGLE   =    581541.7435  DIHED      =     23992.9282
+ 1-4 NB = **************  1-4 EEL =     14816.4614  VDWAALS    = **************
+ EELEC  =    -33370.2802  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    720; vmax =  1158.8649
+vlimit exceeded for step    721; vmax =  1158.9537
+vlimit exceeded for step    722; vmax =  1158.8974
+vlimit exceeded for step    723; vmax =  1158.9377
+vlimit exceeded for step    724; vmax =  1158.9202
+vlimit exceeded for step    725; vmax =  1158.8805
+vlimit exceeded for step    726; vmax =  1158.9878
+vlimit exceeded for step    727; vmax =  1158.8974
+vlimit exceeded for step    728; vmax =  1158.9553
+vlimit exceeded for step    729; vmax =  1158.8930
+vlimit exceeded for step    730; vmax =  1158.8747
+vlimit exceeded for step    731; vmax =  1158.8818
+vlimit exceeded for step    732; vmax =  1158.8988
+vlimit exceeded for step    733; vmax =  1158.9175
+vlimit exceeded for step    734; vmax =  1158.9407
+vlimit exceeded for step    735; vmax =  1158.8932
+vlimit exceeded for step    736; vmax =  1158.8887
+vlimit exceeded for step    737; vmax =  1158.9343
+vlimit exceeded for step    738; vmax =  1158.8353
+vlimit exceeded for step    739; vmax =  1158.8779
+
+ NSTEP =      740   TIME(PS) =       0.740  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  53952184.1418  EPtot      =            NaN
+ BOND   = 412595251.7424  ANGLE   =    581672.0261  DIHED      =     23978.9599
+ 1-4 NB = **************  1-4 EEL =     14764.8724  VDWAALS    = **************
+ EELEC  =    -33405.3849  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    740; vmax =  1158.9183
+vlimit exceeded for step    741; vmax =  1158.9012
+vlimit exceeded for step    742; vmax =  1158.9072
+vlimit exceeded for step    743; vmax =  1158.9118
+vlimit exceeded for step    744; vmax =  1158.9122
+vlimit exceeded for step    745; vmax =  1158.8786
+vlimit exceeded for step    746; vmax =  1158.9623
+vlimit exceeded for step    747; vmax =  1158.9036
+vlimit exceeded for step    748; vmax =  1158.8971
+vlimit exceeded for step    749; vmax =  1158.9516
+vlimit exceeded for step    750; vmax =  1158.8770
+vlimit exceeded for step    751; vmax =  1158.9032
+vlimit exceeded for step    752; vmax =  1158.8786
+vlimit exceeded for step    753; vmax =  1158.9055
+vlimit exceeded for step    754; vmax =  1158.9705
+vlimit exceeded for step    755; vmax =  1158.9121
+vlimit exceeded for step    756; vmax =  1158.9313
+vlimit exceeded for step    757; vmax =  1158.8740
+vlimit exceeded for step    758; vmax =  1158.9179
+vlimit exceeded for step    759; vmax =  1158.9063
+
+ NSTEP =      760   TIME(PS) =       0.760  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  54101357.0717  EPtot      =            NaN
+ BOND   = 412663024.5423  ANGLE   =    581417.2653  DIHED      =     23936.2450
+ 1-4 NB = **************  1-4 EEL =     14774.2095  VDWAALS    = **************
+ EELEC  =    -33432.9330  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    760; vmax =  1158.9179
+vlimit exceeded for step    761; vmax =  1158.9091
+vlimit exceeded for step    762; vmax =  1158.8805
+vlimit exceeded for step    763; vmax =  1158.9012
+vlimit exceeded for step    764; vmax =  1158.9118
+vlimit exceeded for step    765; vmax =  1158.9297
+vlimit exceeded for step    766; vmax =  1158.9268
+vlimit exceeded for step    767; vmax =  1158.8924
+vlimit exceeded for step    768; vmax =  1158.8997
+vlimit exceeded for step    769; vmax =  1158.8764
+vlimit exceeded for step    770; vmax =  1158.9238
+vlimit exceeded for step    771; vmax =  1158.8559
+vlimit exceeded for step    772; vmax =  1158.9176
+vlimit exceeded for step    773; vmax =  1158.9287
+vlimit exceeded for step    774; vmax =  1158.8852
+vlimit exceeded for step    775; vmax =  1158.9033
+vlimit exceeded for step    776; vmax =  1158.8522
+vlimit exceeded for step    777; vmax =  1158.9492
+vlimit exceeded for step    778; vmax =  1158.9210
+vlimit exceeded for step    779; vmax =  1158.8839
+
+ NSTEP =      780   TIME(PS) =       0.780  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  54217932.2558  EPtot      =            NaN
+ BOND   = 412691515.0120  ANGLE   =    581181.4967  DIHED      =     23790.1826
+ 1-4 NB = **************  1-4 EEL =     14791.5552  VDWAALS    = **************
+ EELEC  =    -33368.0780  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    780; vmax =  1158.8548
+vlimit exceeded for step    781; vmax =  1158.9223
+vlimit exceeded for step    782; vmax =  1158.9326
+vlimit exceeded for step    783; vmax =  1158.9544
+vlimit exceeded for step    784; vmax =  1158.8568
+vlimit exceeded for step    785; vmax =  1158.9210
+vlimit exceeded for step    786; vmax =  1158.8812
+vlimit exceeded for step    787; vmax =  1158.9674
+vlimit exceeded for step    788; vmax =  1158.9177
+vlimit exceeded for step    789; vmax =  1158.8644
+vlimit exceeded for step    790; vmax =  1158.8779
+vlimit exceeded for step    791; vmax =  1158.8381
+vlimit exceeded for step    792; vmax =  1158.8693
+vlimit exceeded for step    793; vmax =  1158.9242
+vlimit exceeded for step    794; vmax =  1158.8832
+vlimit exceeded for step    795; vmax =  1158.9155
+vlimit exceeded for step    796; vmax =  1158.8419
+vlimit exceeded for step    797; vmax =  1158.8490
+vlimit exceeded for step    798; vmax =  1158.9061
+vlimit exceeded for step    799; vmax =  1158.9253
+
+ NSTEP =      800   TIME(PS) =       0.800  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  54275803.3655  EPtot      =            NaN
+ BOND   = 412703067.7579  ANGLE   =    581651.7763  DIHED      =     23841.9249
+ 1-4 NB = **************  1-4 EEL =     14749.0080  VDWAALS    = **************
+ EELEC  =    -33370.0321  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    800; vmax =  1158.9114
+vlimit exceeded for step    801; vmax =  1158.8892
+vlimit exceeded for step    802; vmax =  1158.9037
+vlimit exceeded for step    803; vmax =  1158.9046
+vlimit exceeded for step    804; vmax =  1158.9139
+vlimit exceeded for step    805; vmax =  1158.8767
+vlimit exceeded for step    806; vmax =  1158.9199
+vlimit exceeded for step    807; vmax =  1158.9613
+vlimit exceeded for step    808; vmax =  1158.8722
+vlimit exceeded for step    809; vmax =  1158.8906
+vlimit exceeded for step    810; vmax =  1158.8818
+vlimit exceeded for step    811; vmax =  1158.8563
+vlimit exceeded for step    812; vmax =  1158.8966
+vlimit exceeded for step    813; vmax =  1158.9130
+vlimit exceeded for step    814; vmax =  1158.8891
+vlimit exceeded for step    815; vmax =  1158.8944
+vlimit exceeded for step    816; vmax =  1158.9657
+vlimit exceeded for step    817; vmax =  1158.9223
+vlimit exceeded for step    818; vmax =  1158.9467
+vlimit exceeded for step    819; vmax =  1158.9275
+
+ NSTEP =      820   TIME(PS) =       0.820  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  54313066.0518  EPtot      =            NaN
+ BOND   = 412710878.0801  ANGLE   =    581385.8172  DIHED      =     23720.3242
+ 1-4 NB = **************  1-4 EEL =     14749.4568  VDWAALS    = **************
+ EELEC  =    -33422.6691  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    820; vmax =  1158.9447
+vlimit exceeded for step    821; vmax =  1158.9240
+vlimit exceeded for step    822; vmax =  1158.8819
+vlimit exceeded for step    823; vmax =  1158.9948
+vlimit exceeded for step    824; vmax =  1158.9433
+vlimit exceeded for step    825; vmax =  1158.9317
+vlimit exceeded for step    826; vmax =  1158.9523
+vlimit exceeded for step    827; vmax =  1158.8858
+vlimit exceeded for step    828; vmax =  1158.9211
+vlimit exceeded for step    829; vmax =  1158.8461
+vlimit exceeded for step    830; vmax =  1158.9012
+vlimit exceeded for step    831; vmax =  1158.9613
+vlimit exceeded for step    832; vmax =  1158.9534
+vlimit exceeded for step    833; vmax =  1158.8820
+vlimit exceeded for step    834; vmax =  1158.9238
+vlimit exceeded for step    835; vmax =  1158.9414
+vlimit exceeded for step    836; vmax =  1158.8705
+vlimit exceeded for step    837; vmax =  1158.8931
+vlimit exceeded for step    838; vmax =  1158.9427
+vlimit exceeded for step    839; vmax =  1158.8536
+
+ NSTEP =      840   TIME(PS) =       0.840  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  54346387.2112  EPtot      =            NaN
+ BOND   = 412717608.2097  ANGLE   =    581263.6042  DIHED      =     23673.6940
+ 1-4 NB = **************  1-4 EEL =     14731.5587  VDWAALS    = **************
+ EELEC  =    -33392.6807  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    840; vmax =  1158.9551
+vlimit exceeded for step    841; vmax =  1158.8828
+vlimit exceeded for step    842; vmax =  1158.9515
+vlimit exceeded for step    843; vmax =  1158.7985
+vlimit exceeded for step    844; vmax =  1158.9273
+vlimit exceeded for step    845; vmax =  1158.8744
+vlimit exceeded for step    846; vmax =  1158.8436
+vlimit exceeded for step    847; vmax =  1158.9513
+vlimit exceeded for step    848; vmax =  1158.9023
+vlimit exceeded for step    849; vmax =  1158.8395
+vlimit exceeded for step    850; vmax =  1158.9347
+vlimit exceeded for step    851; vmax =  1158.9155
+vlimit exceeded for step    852; vmax =  1158.9257
+vlimit exceeded for step    853; vmax =  1158.8831
+vlimit exceeded for step    854; vmax =  1158.9109
+vlimit exceeded for step    855; vmax =  1158.8973
+vlimit exceeded for step    856; vmax =  1158.8831
+vlimit exceeded for step    857; vmax =  1158.8999
+vlimit exceeded for step    858; vmax =  1158.9428
+vlimit exceeded for step    859; vmax =  1158.9077
+
+ NSTEP =      860   TIME(PS) =       0.860  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  54364037.8924  EPtot      =            NaN
+ BOND   = 412726218.5513  ANGLE   =    580967.0206  DIHED      =     23669.7873
+ 1-4 NB = **************  1-4 EEL =     14743.1501  VDWAALS    = **************
+ EELEC  =    -33410.3384  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    860; vmax =  1158.9270
+vlimit exceeded for step    861; vmax =  1158.8958
+vlimit exceeded for step    862; vmax =  1158.9039
+vlimit exceeded for step    863; vmax =  1158.9466
+vlimit exceeded for step    864; vmax =  1158.8816
+vlimit exceeded for step    865; vmax =  1158.9262
+vlimit exceeded for step    866; vmax =  1158.9181
+vlimit exceeded for step    867; vmax =  1158.8346
+vlimit exceeded for step    868; vmax =  1158.9230
+vlimit exceeded for step    869; vmax =  1158.9567
+vlimit exceeded for step    870; vmax =  1158.9291
+vlimit exceeded for step    871; vmax =  1158.9388
+vlimit exceeded for step    872; vmax =  1158.8760
+vlimit exceeded for step    873; vmax =  1158.8300
+vlimit exceeded for step    874; vmax =  1158.9481
+vlimit exceeded for step    875; vmax =  1158.8761
+vlimit exceeded for step    876; vmax =  1158.8887
+vlimit exceeded for step    877; vmax =  1158.9119
+vlimit exceeded for step    878; vmax =  1158.9438
+vlimit exceeded for step    879; vmax =  1158.9836
+
+ NSTEP =      880   TIME(PS) =       0.880  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  54371749.6545  EPtot      =            NaN
+ BOND   = 412732930.3577  ANGLE   =    581240.3256  DIHED      =     23678.0249
+ 1-4 NB = **************  1-4 EEL =     14731.1119  VDWAALS    = **************
+ EELEC  =    -33448.9486  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    880; vmax =  1158.8741
+vlimit exceeded for step    881; vmax =  1158.9702
+vlimit exceeded for step    882; vmax =  1158.8451
+vlimit exceeded for step    883; vmax =  1158.9305
+vlimit exceeded for step    884; vmax =  1158.8989
+vlimit exceeded for step    885; vmax =  1158.9177
+vlimit exceeded for step    886; vmax =  1158.8706
+vlimit exceeded for step    887; vmax =  1158.9311
+vlimit exceeded for step    888; vmax =  1158.9011
+vlimit exceeded for step    889; vmax =  1158.9319
+vlimit exceeded for step    890; vmax =  1158.8453
+vlimit exceeded for step    891; vmax =  1158.8703
+vlimit exceeded for step    892; vmax =  1158.9255
+vlimit exceeded for step    893; vmax =  1158.9780
+vlimit exceeded for step    894; vmax =  1158.9081
+vlimit exceeded for step    895; vmax =  1158.8766
+vlimit exceeded for step    896; vmax =  1158.9186
+vlimit exceeded for step    897; vmax =  1158.9142
+vlimit exceeded for step    898; vmax =  1158.8716
+vlimit exceeded for step    899; vmax =  1158.8931
+
+ NSTEP =      900   TIME(PS) =       0.900  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  54388415.5314  EPtot      =            NaN
+ BOND   = 412739338.9371  ANGLE   =    581286.5422  DIHED      =     23552.4340
+ 1-4 NB = **************  1-4 EEL =     14740.4922  VDWAALS    = **************
+ EELEC  =    -33431.8249  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    900; vmax =  1158.8881
+vlimit exceeded for step    901; vmax =  1158.9046
+vlimit exceeded for step    902; vmax =  1158.9146
+vlimit exceeded for step    903; vmax =  1158.9136
+vlimit exceeded for step    904; vmax =  1158.9089
+vlimit exceeded for step    905; vmax =  1158.8968
+vlimit exceeded for step    906; vmax =  1158.9396
+vlimit exceeded for step    907; vmax =  1158.9094
+vlimit exceeded for step    908; vmax =  1158.9153
+vlimit exceeded for step    909; vmax =  1158.8839
+vlimit exceeded for step    910; vmax =  1158.8948
+vlimit exceeded for step    911; vmax =  1158.9226
+vlimit exceeded for step    912; vmax =  1158.9238
+vlimit exceeded for step    913; vmax =  1158.8476
+vlimit exceeded for step    914; vmax =  1158.9293
+vlimit exceeded for step    915; vmax =  1158.8809
+vlimit exceeded for step    916; vmax =  1158.9028
+vlimit exceeded for step    917; vmax =  1158.8400
+vlimit exceeded for step    918; vmax =  1158.9415
+vlimit exceeded for step    919; vmax =  1158.8557
+
+ NSTEP =      920   TIME(PS) =       0.920  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  54412556.7714  EPtot      =            NaN
+ BOND   = 412744363.6199  ANGLE   =    581042.4115  DIHED      =     23524.3121
+ 1-4 NB = **************  1-4 EEL =     14738.3553  VDWAALS    = **************
+ EELEC  =    -33411.0171  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    920; vmax =  1158.9194
+vlimit exceeded for step    921; vmax =  1158.9294
+vlimit exceeded for step    922; vmax =  1158.9395
+vlimit exceeded for step    923; vmax =  1158.9715
+vlimit exceeded for step    924; vmax =  1158.8743
+vlimit exceeded for step    925; vmax =  1158.8969
+vlimit exceeded for step    926; vmax =  1158.9033
+vlimit exceeded for step    927; vmax =  1158.8808
+vlimit exceeded for step    928; vmax =  1158.9065
+vlimit exceeded for step    929; vmax =  1158.9203
+vlimit exceeded for step    930; vmax =  1158.9058
+vlimit exceeded for step    931; vmax =  1158.9344
+vlimit exceeded for step    932; vmax =  1158.9028
+vlimit exceeded for step    933; vmax =  1158.9104
+vlimit exceeded for step    934; vmax =  1158.8946
+vlimit exceeded for step    935; vmax =  1159.0154
+vlimit exceeded for step    936; vmax =  1158.9359
+vlimit exceeded for step    937; vmax =  1158.8932
+vlimit exceeded for step    938; vmax =  1158.8726
+vlimit exceeded for step    939; vmax =  1158.8695
+
+ NSTEP =      940   TIME(PS) =       0.940  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  54431714.7844  EPtot      =            NaN
+ BOND   = 412747900.8640  ANGLE   =    581197.9444  DIHED      =     23482.9917
+ 1-4 NB = **************  1-4 EEL =     14727.2370  VDWAALS    = **************
+ EELEC  =    -33417.6703  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    940; vmax =  1158.9521
+vlimit exceeded for step    941; vmax =  1158.8452
+vlimit exceeded for step    942; vmax =  1158.8569
+vlimit exceeded for step    943; vmax =  1158.8824
+vlimit exceeded for step    944; vmax =  1158.9162
+vlimit exceeded for step    945; vmax =  1158.8597
+vlimit exceeded for step    946; vmax =  1158.9344
+vlimit exceeded for step    947; vmax =  1158.8872
+vlimit exceeded for step    948; vmax =  1158.8113
+vlimit exceeded for step    949; vmax =  1158.9440
+vlimit exceeded for step    950; vmax =  1158.9243
+vlimit exceeded for step    951; vmax =  1158.9210
+vlimit exceeded for step    952; vmax =  1158.9325
+vlimit exceeded for step    953; vmax =  1158.9103
+vlimit exceeded for step    954; vmax =  1158.8368
+vlimit exceeded for step    955; vmax =  1158.9257
+vlimit exceeded for step    956; vmax =  1158.9816
+vlimit exceeded for step    957; vmax =  1158.8792
+vlimit exceeded for step    958; vmax =  1158.9409
+vlimit exceeded for step    959; vmax =  1158.8643
+
+ NSTEP =      960   TIME(PS) =       0.960  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  54447877.4986  EPtot      =            NaN
+ BOND   = 412751056.4323  ANGLE   =    581113.4410  DIHED      =     23520.3801
+ 1-4 NB = **************  1-4 EEL =     14734.2010  VDWAALS    = **************
+ EELEC  =    -33429.8352  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    960; vmax =  1158.9570
+vlimit exceeded for step    961; vmax =  1158.9508
+vlimit exceeded for step    962; vmax =  1158.8689
+vlimit exceeded for step    963; vmax =  1158.9100
+vlimit exceeded for step    964; vmax =  1158.9118
+vlimit exceeded for step    965; vmax =  1158.9212
+vlimit exceeded for step    966; vmax =  1158.9371
+vlimit exceeded for step    967; vmax =  1158.8494
+vlimit exceeded for step    968; vmax =  1158.9100
+vlimit exceeded for step    969; vmax =  1158.9103
+vlimit exceeded for step    970; vmax =  1158.9017
+vlimit exceeded for step    971; vmax =  1158.9743
+vlimit exceeded for step    972; vmax =  1158.9235
+vlimit exceeded for step    973; vmax =  1158.8650
+vlimit exceeded for step    974; vmax =  1158.9229
+vlimit exceeded for step    975; vmax =  1158.9326
+vlimit exceeded for step    976; vmax =  1158.9373
+vlimit exceeded for step    977; vmax =  1158.9453
+vlimit exceeded for step    978; vmax =  1158.9222
+vlimit exceeded for step    979; vmax =  1158.8917
+
+ NSTEP =      980   TIME(PS) =       0.980  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  54459835.8462  EPtot      =            NaN
+ BOND   = 412753227.1314  ANGLE   =    581013.3840  DIHED      =     23423.2419
+ 1-4 NB = **************  1-4 EEL =     14731.5249  VDWAALS    = **************
+ EELEC  =    -33408.3856  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+vlimit exceeded for step    980; vmax =  1158.9350
+vlimit exceeded for step    981; vmax =  1158.8302
+vlimit exceeded for step    982; vmax =  1158.9436
+vlimit exceeded for step    983; vmax =  1158.8609
+vlimit exceeded for step    984; vmax =  1158.8966
+vlimit exceeded for step    985; vmax =  1158.9320
+vlimit exceeded for step    986; vmax =  1158.8876
+vlimit exceeded for step    987; vmax =  1158.8991
+vlimit exceeded for step    988; vmax =  1158.8836
+vlimit exceeded for step    989; vmax =  1158.9044
+vlimit exceeded for step    990; vmax =  1158.8380
+vlimit exceeded for step    991; vmax =  1158.9075
+vlimit exceeded for step    992; vmax =  1158.8753
+vlimit exceeded for step    993; vmax =  1158.8825
+vlimit exceeded for step    994; vmax =  1158.8631
+vlimit exceeded for step    995; vmax =  1158.9224
+vlimit exceeded for step    996; vmax =  1158.8847
+vlimit exceeded for step    997; vmax =  1158.9106
+vlimit exceeded for step    998; vmax =  1158.9286
+vlimit exceeded for step    999; vmax =  1158.8606
+| RE_POSITION Moving by 164.731559158.017350160.844490
+
+ NSTEP =     1000   TIME(PS) =       1.000  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  54463087.5816  EPtot      =            NaN
+ BOND   = 412755174.5536  ANGLE   =    580966.8854  DIHED      =     23452.6249
+ 1-4 NB = **************  1-4 EEL =     14737.3534  VDWAALS    = **************
+ EELEC  =    -33404.5813  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+
+      A V E R A G E S   O V E R    1000 S T E P S
+
+
+ NSTEP =     1000   TIME(PS) =       1.000  TEMP(K) =*********  PRESS =     0.0
+ Etot   =            NaN  EKtot   =  50648942.6621  EPtot      =            NaN
+ BOND   = 378532408.6346  ANGLE   =    533604.3135  DIHED      =     23390.1050
+ 1-4 NB = **************  1-4 EEL =     17401.7503  VDWAALS    = **************
+ EELEC  =    -36908.2244  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+
+      R M S  F L U C T U A T I O N S
+
+
+ NSTEP =     1000   TIME(PS) =       1.000  TEMP(K) =258244.01  PRESS =     0.0
+ Etot   =            NaN  EKtot   =   9740676.3164  EPtot      =            NaN
+ BOND   =  96771489.5316  ANGLE   =    125047.8042  DIHED      =      3374.0168
+ 1-4 NB = **************  1-4 EEL =      4558.4196  VDWAALS    = **************
+ EELEC  =      6106.4434  EGB     =            NaN  RESTRAINT  =         0.0000
+ ------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+   5.  TIMINGS
+--------------------------------------------------------------------------------
+
+|                Calc gb radii            183.38 (25.21% of Gen B)
+|                Calc gb diag             405.87 (55.80% of Gen B)
+|                Calc gb off-diag         138.06 (18.98% of Gen B)
+|             Gen Born time            727.31 (100.0% of Nonbo)
+|          Nonbond force            727.31 (99.35% of Force)
+|          Bond/Angle/Dihedral        4.77 ( 0.65% of Force)
+|       Force time               732.09 (99.59% of Runmd)
+|       Verlet update time         2.98 ( 0.40% of Runmd)
+|    Runmd Time               735.08 (100.0% of Total)
+|    Other                      0.11 ( 0.01% of Total)
+| Total time               735.19 (100.0% of ALL  )
+
+| Number of list builds   :          0
+
+| Highest rstack allocated:          0
+| Highest istack allocated:          0
+
+| Final Performance Info:
+| -----------------------------------------------------
+| Average timings for all steps:
+|     Elapsed(s) =     735.08 Per Step(ms) =     735.08
+|         ns/day =       0.12   seconds/ns =  735075.96
+| -----------------------------------------------------
+
+|           Job began  at 15:28:56.229  on 05/17/2023
+|           Setup done at 15:28:56.343  on 05/17/2023
+|           Run   done at 15:41:11.418  on 05/17/2023
+|     wallclock() was called   22081 times
+
+|3D-RISM memory allocation summary
+|Type          Maximum        Current   
+|Integer       0.00000 GB     0.00000 GB
+|Real          0.00000 GB     0.00000 GB
+|Logical       0.00000 GB     0.00000 GB
+|Character     0.00000 GB     0.00000 GB
+|---------------------------------------
+|Total         0.00000 GB     0.00000 GB

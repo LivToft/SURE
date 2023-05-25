@@ -1,0 +1,44 @@
+Start tleap and run tleap file:
+	$AMBERHOME/bin/tleap -f tleap.in
+
+Use Cpptraj to make a PDB file
+	$AMBERHOME/bin/cpptraj -p 3p5r_ion.prmtop -i pdb.in>pdb.out
+
+-------------------------------------------------------------------------------------------------------
+tleap.in file details:
+-------------------------------------------------------------------------------------------------------
+
+Get protein force field
+	source leaprc.protein.ff14SB
+
+Load TIP3P water force field with Li/Merz (12-6) ion (+2 to +4) ion parameters
+	source leaprc.water.tip3p
+
+Load pdb file into "3p5r"
+	3p5r=loadpdb 3p5r_corrected.pdb
+
+Save prmtop and incrd files
+	saveAmberParm 3p5r 3p5r_gas.prmtop 3p5r_gas.inpcrd
+
+Add neutralizing charges (protein is -19 (+3 for removed Mg2+), as determined with H++, and is neutralized with NaCl)
+	addIons 3p5r Na+ 16
+
+Solvate protein in a truncated octahedron of water. Every protein is 10.0Å away from the edge of the water filled box so that there is at least three layers of solvation on all sides of the protein)
+	solvateOct 3p5r TIP3PBOX 10.0
+
+Add buffer ions with random positions (150 mM NaCl consistent with normal cell conditions)
+	addIonsRand 3p5r Na+ 127 Cl- 127
+
+Save the prmtop and inpcrd files
+	saveAmberParm 3p5r 3p5r_ion.prmtop 3p5r_ion.inpcrd
+
+Quit LEaP
+	quit
+
+-------------------------------------------------------------------------------------------------------
+pdb.in file details
+-------------------------------------------------------------------------------------------------------
+	trajin 3p5r_ion.inpcrd
+	trajout 3p5r_wions_water.pdb PDB
+	run
+	

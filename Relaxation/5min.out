@@ -1,0 +1,51 @@
+
+          -------------------------------------------------------
+          Amber 22 PMEMD                              2022
+          -------------------------------------------------------
+
+| PMEMD implementation of SANDER, Release 22
+
+|  Compiled date/time: Thu Apr 14 14:06:37 2022
+| Run on 05/17/2023 at 16:50:37
+
+|   Executable path: /Applications/amber22/bin/pmemd
+| Working directory: /Users/livtoft/Desktop/SURE/Relaxation
+|          Hostname: Unknown
+| WARNING: Stack usage limited by a hard resource limit of   67092480 bytes!
+|          If segment violations occur, get your sysadmin to increase the limit.
+  [-O]verwriting output
+
+File Assignments:
+|   MDIN: 5min.in                                                               
+|  MDOUT: 5min.out                                                              
+| INPCRD: 4md.rst7                                                              
+|   PARM: 3p5r_FGP_ion.prmtop                                                   
+| RESTRT: 5min.rst7                                                             
+|   REFC: 4md.rst7                                                              
+|  MDVEL: mdvel                                                                 
+|   MDEN: mden                                                                  
+|  MDCRD: mdcrd.5min                                                            
+| MDINFO: 5min.info                                                             
+|  MDFRC: mdfrc                                                                 
+
+
+ Here is the input file:
+
+Minimization of everything excluding backbone                                  
+ &cntrl                                                                        
+  imin = 1, maxcyc = 1000,                                                     
+  ncyc = 30, ntx = 1,                                                          
+  ntwe = 0, ntwr = 500, ntpr = 50,                                             
+  ntc = 2, ntf = 2, ntb = 1, ntp = 0,                                          
+  cut = 8.0,                                                                   
+  ntr=1, restraintmask="@CA,N,C", restraint_wt=10.                             
+  ioutfm=1, ntxo=2,                                                            
+ /                                                                             
+
+
+Note: ig = -1. Setting random seed to   137467 based on wallclock time in 
+      microseconds.
+| irandom = 1, using AMBER's internal random number generator (default).
+ 
+
+  Unit    9 Error on OPEN: 4md.rst7                                                                                                                                                                                                                                                        

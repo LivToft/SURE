@@ -1,0 +1,63 @@
+Add hydrogens to the isolated substrate
+	obabel FGP.pdb -O FGP_h.pdb -h
+
+Remove CONECT portion and change FGG -> FGP. Save file as FGP_new.pdb
+
+Use antechamber to make mol2 file
+	antechamber -i FGP_new.pdb -fi pdb -o FGP.mol2 -fo mol2 -c bcc -s 2
+
+Test if required parameters are available. FGP.frcmod = parameter file to load missing parameters into LEaP
+	parmchk2 -i FGP.mol2 -f mol2 -o FGP.frcmod
+
+Start tleap
+	/Applications/amber22/bin/tleap -f oldff/leaprc.ff99SB
+
+load GAFF force field
+	source leaprc.gaff
+
+Load ion force field
+	source leaprc.water.tip3p
+
+Load FGP unit
+	FGP=loadmol2 FGP.mol2
+
+Check for missing parameters
+	check FGP
+
+Load frcmod file to help tleap with missing parameters
+	loadamberparams FGP.frcmod
+
+Create library file for FGP
+	saveoff FGP FGP.lib
+
+Create prmtop and rst7 files
+	saveamberparm FGP FGP.prmtop FGP.rst7
+
+Load the paramters
+        loadamberparams FGP.frcmod
+
+Load FGP library file
+	loadoff FGP.lib
+
+Load protein pdb with substrate
+	complex=loadpdb 3p5r_corrected_substr.pdb
+
+
+Create prmtop and rst7 files
+	saveamberparm complex 3p5r_FGP.prmtop 3p5r_FGP.rst7
+
+Save complex as pdb
+	savepdb complex 3p5r_FGP.pdb
+	quit
+
+Perform a simple minimization
+	sander -O -i min.in -o 3p5r_FGP_min.out -p 3p5r_FGP.prmtop -c 3p5r_FGP.rst7 -r 3p5r_FGP_min.ncrst &
+
+
+Generate pdb of minimized structures
+	ambpdb -p 3p5r_FGP.prmtop -c 3p5r_FGP_min.ncrst > 3p5r_FGP_min.pdb
+
+Heat the structure
+	sander -O -i eq.in -o 3p5r_FGP_eq.out -p 3p5r_FGP.prmtop -c 3p5r_FGP_min.ncrst -r 3p5r_FGP_eq.rst -x 3p5r_FGP_eq.nc &
+
+
