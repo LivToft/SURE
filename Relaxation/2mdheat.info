@@ -1,26 +1,26 @@
 
- NSTEP =   404000   TIME(PS) =     404.000  TEMP(K) =   180.41  PRESS =     0.0
- Etot   =   -426486.1649  EKtot   =     46964.9871  EPtot      =   -473451.1520
- BOND   =      1113.9582  ANGLE   =      3008.0484  DIHED      =      7966.9094
- 1-4 NB =      3448.0944  1-4 EEL =     32220.6125  VDWAALS    =     71007.4043
- EELEC  =   -595671.8238  EHBOND  =         0.0000  RESTRAINT  =      3455.6446
- EAMBER (non-restraint)  =   -476906.7966
- Ewald error estimate:   0.3032E-03
+ NSTEP =   406000   TIME(PS) =     406.000  TEMP(K) =   180.00  PRESS =     0.0
+ Etot   =   -426497.1154  EKtot   =     46856.7024  EPtot      =   -473353.8178
+ BOND   =      1119.1176  ANGLE   =      2990.7847  DIHED      =      7989.1213
+ 1-4 NB =      3428.2363  1-4 EEL =     32154.0798  VDWAALS    =     70832.9783
+ EELEC  =   -595362.3224  EHBOND  =         0.0000  RESTRAINT  =      3494.1866
+ EAMBER (non-restraint)  =   -476848.0044
+ Ewald error estimate:   0.3031E-03
  NMR restraints: Bond =    0.000   Angle =     0.000   Torsion =     0.000
 ===============================================================================
  ------------------------------------------------------------------------------
 | Current Timing Info
 | -------------------
-| Total steps:   1000000 | Completed:    404000 ( 40.4%) | Remaining:    596000
+| Total steps:   1000000 | Completed:    406000 ( 40.6%) | Remaining:    594000
 |
 | Average timings for last    1000 steps:
-|     Elapsed(s) =     204.16 Per Step(ms) =     204.16
-|         ns/day =       0.42   seconds/ns =  204157.16
+|     Elapsed(s) =     205.57 Per Step(ms) =     205.57
+|         ns/day =       0.42   seconds/ns =  205566.75
 |
 | Average timings for all steps:
-|     Elapsed(s) =  142558.34 Per Step(ms) =     352.87
-|         ns/day =       0.24   seconds/ns =  352867.17
+|     Elapsed(s) =  142970.11 Per Step(ms) =     352.14
+|         ns/day =       0.25   seconds/ns =  352143.14
 |
 |
-| Estimated time remaining:      58.4 hours.
+| Estimated time remaining:      58.1 hours.
  ------------------------------------------------------------------------------
