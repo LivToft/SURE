@@ -1,0 +1,83 @@
+ _aln.pos              10        20        30        40        50        60
+1N23A          RRSGNYQPALWDSNYIQSLNTPYTE-ERHLDRKAELIVQVRILLK--EK-M------------ 
+3P5RA          ---------------------------TYQERADELVVKIKDM-FNALGDGDISPSAYDTAWV 
+querysequence  RLSANYHGDLWHHNVIQTLETPFRESSTYQERADELVVKIKDM-FNALGDGDISPSAYDTAWV 
+ _consrvd                                     *  ** *
+
+ _aln.pos           70        80        90       100       110       120
+1N23A          --------------------------------------------------------------- 
+3P5RA          ARLATISSDGSEKPRFPQALNWVFNNQLQDGSWGIESHFSLCDRLLNTTNSVIALSVWKTGHS 
+querysequence  ARLATISSDGSEKPRFPQALNWVFNNQLQDGSWGIESHFSLCDRLLNTTNSVIALSVWKTGHS 
+ _consrvd
+
+ _aln.pos       130       140       150       160       170       180
+1N23A          --------------------------------------------------------------- 
+3P5RA          QVQQGAEFIAENLRLLNEEDELSPDFQIIFPALLQKAKALGINLPYDLPFIKYLSTTREARLT 
+querysequence  QVQQGAEFIAENLRLLNEEDELSPDFQIIFPALLQKAKALGINLPYDLPFIKYLSTTREARLT 
+ _consrvd
+
+ _aln.pos    190       200       210       220       230       240       250
+1N23A          --------------------------------------------------------------- 
+3P5RA          DVSAAADNIPANMLNALEGLEEVIDWNKIMRFQSKDGSFLSSPASTACVLMNTGDEKCFTFLN 
+querysequence  DVSAAADNIPANMLNALEGLEEVIDWNKIMRFQSKDGSFLSSPASTACVLMNTGDEKCFTFLN 
+ _consrvd
+
+ _aln.pos           260       270       280       290       300       310
+1N23A          ---------------E-PVQQLELIHDLKYLGLSDFFQDEIKEILGVIYNEHKCF-M------ 
+3P5RA          NLLDKFGGCVPCMYSIDLLERLSLVDNIEHLGIGRHFKQEIKGALDYVYR-HWSERGIGWGRD 
+querysequence  NLLDKFGGCVPCMYSIDLLERLSLVDNIEHLGIGRHFKQEIKGALDYVYR-HWSERGIGWGRD 
+ _consrvd                           * *      **    *  ***  *   *  *
+
+ _aln.pos        320       330       340       350       360       370
+1N23A          ----DLYFTALGFRLLRQHGFNISQDVFNCFKNEKGID--FK-A-SLAQDT-----------K 
+3P5RA          SLVPDLNTTALGLRTLRMHGYNVSSDVL--N-------NFKDENGRF--F-SSAGQTHVELRS 
+querysequence  SLVPDLNTTALGLRTLRMHGYNVSSDVLNNF---------KDENGRF---FSSAGQTHVELRS 
+ _consrvd          **  **** * ** ** * * **
+
+ _aln.pos     380       390       400       410       420       430       440
+1N23A          GML-QLYEAS-FLLRKGEDTLELA-REFATKC-LQKK--LD----EIDE------N--LLL-W 
+3P5RA          V-VNL-FRASDLAFP---D-E-RAMD-DARKFAEP-YLRE-ALATK--ISTNTKLFKEI-EYV 
+querysequence  --VVNLFRASDLAFP-----DERAMD-DARKFAEPYLREALATK----ISTNTKLFKEI---- 
+ _consrvd              **             *    * *
+
+ _aln.pos            450       460       470       480       490       500
+1N23A          IRHSLDLPLHW-RIQSVEARWFIDAYARRP--D-------------MNPLIFELAKLNFNIIQ 
+3P5RA          -VE---YPW-HMSIPRLEARSYIDSY--D-DNYVWQRKTLYRMPSLSNSKCLELAKLDFNIVQ 
+querysequence  -EYVVEYPW-HMSIPRLEARSYIDSYDDN---YVWQRKTLYRMPSLSNSKCLELAKLDFNIVQ 
+ _consrvd             *     *   ***  ** *                     *    ***** *** *
+
+ _aln.pos         510       520       530       540       550       560
+1N23A          ATHQQELKDLSRWWSRLCFPEKLPFVRDRLVESFFWAVGMFEPHQHGYQRKMAATIIVLATVI 
+3P5RA          SLHQEELKLLTRWWKE--------------AEVYFSS-A-TFEPEYSATRIAFTKIGCLQVLF 
+querysequence  SLHQEELKLLTRWWKESGMAD-INFTRHRVAEVYFSSA--TFEPEYSATRIAFTKIGCLQVLF 
+ _consrvd        ** *** * ***                 *  *              *     *  *
+
+ _aln.pos      570       580       590       600       610       620       630
+1N23A          DDIYDVYGTLDELELFTDTFKRWDTESITRLPYYMQLCYWGVHNYISDAAYDILKEH-GFFCL 
+3P5RA          DDMADIFATLDELKSFTEGVKRWDTSLLHEIPECMQTCFKVWFKLMEEVNNDVV-KVQGRDML 
+querysequence  DDMADIFATLDELKSFTEGVKRWDTSLLHEIPECMQTCFKVWFKLMEEVNNDVV-KVQGRDML 
+ _consrvd      **  *   *****  **   *****      *  ** *             *      *   *
+
+ _aln.pos             640       650       660       670       680       690
+1N23A          QYLRKSVVDLVEAYFHEAKWYHSGYTPSLDEYLNIAKISVASPAIISPTYFT-FANASHDTAV 
+3P5RA          AHIRKPWELYFNCYVQEREWLEAGYIPTFEEYLKTYAISVGLGPCTLQPILLMGELVK--DDV 
+querysequence  AHIRKPWELYFNCYVQEREWLEAGYIPTFEEYLKTYAISVGLGPCTLQPILLMGELVK--DDV 
+ _consrvd         **        *  *  *   ** *   ***    ***                      *
+
+ _aln.pos          700       710       720       730       740       750
+1N23A          IDSL---YQYHDILCLAGIILRLPDDLGTSYFELARGDVPKTIQCYMKETN-ASEEEAVEHVK 
+3P5RA          V--EKVHY-PSNMFELVSLSWRLTNDTKTYQAEKARGQQASGIACYMKDNPGATEEDAIKHIC 
+querysequence  V--EKVHY-PSNMFELVSLSWRLTNDTKTYQAEKARGQQASGIACYMKDNPGATEEDAIKHIC 
+ _consrvd             *       *     **  *  *   * ***     * ****    * ** *  *
+
+ _aln.pos       760       770       780       790       800       810
+1N23A          FLIREAWKDMNTAI-AA-GY-PFPDGMVAGAANIGRVAQFIYLHGDGFGVQHSKTYEHIAGLL 
+3P5RA          RVVDRALKEASFEYFK-PS-NDIPMGCKSFIFNLRLCVQIFY---------------YIRKVY 
+querysequence  RVVDRALKEASFEYFK--PSNDIPMGCKSFIFNLRLCVQIFYKFIDGYGIANEEIKDYIRKVY 
+ _consrvd           * *               * *      *     *  *                *
+
+ _aln.pos    820
+1N23A          FEPYA-...- 
+3P5RA          IDPIQV.... 
+querysequence  IDPIQV.... 
+ _consrvd        *   ***

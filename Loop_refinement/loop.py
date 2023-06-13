@@ -14,13 +14,16 @@ import sys
 taskid = int(sys.argv[1])
 env = Environ(rand_seed=-1000-taskid)
 
+# directories for input atom files
+env.io.atom_files_directory = ['.', '../atom_files']
+env.io.hetatm = True
+
 class MyLoop(LoopModel):
     def select_loop_atoms(self):
         rngs = (
-           self.residue_range('78:A', '110:A'),
-	   self.residue_range('571:A', '576:A'),
-	   self.residue_range('862:A', '864:A'),
-        )
+	   self.residue_range('753:A', '761:A'),
+           self.residue_range('-4:A', '0:A')
+	)
         for rng in rngs:
             if len(rng) > 40:
                 raise ModellerError("loop too long")

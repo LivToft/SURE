@@ -4,7 +4,7 @@ Add hydrogens to the isolated substrate
 Remove CONECT portion and change FGG -> FGP. Save file as FGP_new.pdb
 
 Use antechamber to make mol2 file
-	antechamber -i FGP_new.pdb -fi pdb -o FGP.mol2 -fo mol2 -c bcc -s 2
+	antechamber -i FGP_new.pdb -fi pdb -o FGP.mol2 -fo mol2 -c bcc -s 2 -nc -3
 
 Test if required parameters are available. FGP.frcmod = parameter file to load missing parameters into LEaP
 	parmchk2 -i FGP.mol2 -f mol2 -o FGP.frcmod
