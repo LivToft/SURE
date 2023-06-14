@@ -9,4 +9,13 @@
   nscm = 0, barostat = 2,
   ntr=1, restraintmask="@CA,N,C", restraint_wt=10.
   ioutfm=1, ntxo=2,
+  ifqnt=1
  /
+ &qmmm
+  qmmask=':780-783',
+  qmcharge=3,
+  qm_theory='PM3',
+  qmshake=1,
+  qm_ewald=1, qm_pme=1
+  /
+

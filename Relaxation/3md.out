@@ -1,25 +1,24 @@
 
           -------------------------------------------------------
-          Amber 22 PMEMD                              2022
+          Amber 20 PMEMD                              2020
           -------------------------------------------------------
 
-| PMEMD implementation of SANDER, Release 22
+| PMEMD implementation of SANDER, Release 18
 
-|  Compiled date/time: Thu Apr 14 14:06:37 2022
-| Run on 05/17/2023 at 16:50:37
+|  Compiled date/time: Thu Jun  2 17:33:41 2022
+| Run on 06/13/2023 at 16:02:18
 
-|   Executable path: /Applications/amber22/bin/pmemd
-| Working directory: /Users/livtoft/Desktop/SURE/Relaxation
-|          Hostname: Unknown
-| WARNING: Stack usage limited by a hard resource limit of   67092480 bytes!
-|          If segment violations occur, get your sysadmin to increase the limit.
+|   Executable path: pmemd.cuda
+| Working directory: /lustre07/scratch/livtoft/SURE/Relaxation
+|          Hostname: ng10403
+
   [-O]verwriting output
 
 File Assignments:
 |   MDIN: 3md.in                                                                
 |  MDOUT: 3md.out                                                               
 | INPCRD: 2mdheat.rst7                                                          
-|   PARM: 3p5r_FGP_ion.prmtop                                                   
+|   PARM: TXS_GGPP_ion.prmtop                                                   
 | RESTRT: 3md.rst7                                                              
 |   REFC: 2mdheat.rst7                                                          
 |  MDVEL: mdvel                                                                 
@@ -55,25 +54,84 @@ File Assignments:
   barostat = 2,                                                                
   nscm = 0,                                                                    
   ntr=1,                                                                       
-  restraintmask=':1-790',                                                      
+  restraintmask=':-4-783',                                                     
   restraint_wt=100.                                                            
   ioutfm=1,                                                                    
   ntxo=2,                                                                      
  /                                                                             
 
 
-Note: ig = -1. Setting random seed to    32670 based on wallclock time in 
+Note: ig = -1. Setting random seed to   284645 based on wallclock time in 
       microseconds.
 | irandom = 1, using AMBER's internal random number generator (default).
+ 
+|--------------------- INFORMATION ----------------------
+| GPU (CUDA) Version of PMEMD in use: NVIDIA GPU IN USE.
+|                    Version 18.0.0
+| 
+|                      03/25/2018
+| 
+| Implementation by:
+|                    Ross C. Walker     (SDSC)
+|                    Scott Le Grand     (nVIDIA)
+| 
+| Version 18 performance extensions by:
+|                    David Cerutti     (Rutgers)
+| 
+| Precision model in use:
+|      [SPFP] - Single Precision Forces, 64-bit Fixed Point
+|               Accumulation. (Default)
+| 
+|--------------------------------------------------------
+ 
+|----------------- CITATION INFORMATION -----------------
+|
+|    When publishing work that utilized the CUDA version
+|    of AMBER, please cite the following in addition to
+|    the regular AMBER citations:
+|
+|  - Romelia Salomon-Ferrer; Andreas W. Goetz; Duncan
+|    Poole; Scott Le Grand; Ross C. Walker "Routine
+|    microsecond molecular dynamics simulations with
+|    AMBER - Part II: Particle Mesh Ewald", J. Chem.
+|    Theory Comput., 2013, 9 (9), pp3878-3888,
+|    DOI: 10.1021/ct400314y.
+|
+|  - Andreas W. Goetz; Mark J. Williamson; Dong Xu;
+|    Duncan Poole; Scott Le Grand; Ross C. Walker
+|    "Routine microsecond molecular dynamics simulations
+|    with AMBER - Part I: Generalized Born", J. Chem.
+|    Theory Comput., 2012, 8 (5), pp1542-1555.
+|
+|  - Scott Le Grand; Andreas W. Goetz; Ross C. Walker
+|    "SPFP: Speed without compromise - a mixed precision
+|    model for GPU accelerated molecular dynamics
+|    simulations.", Comp. Phys. Comm., 2013, 184
+|    pp374-380, DOI: 10.1016/j.cpc.2012.09.022
+|
+|--------------------------------------------------------
+ 
+|------------------- GPU DEVICE INFO --------------------
+|
+|            CUDA_VISIBLE_DEVICES: 0
+|   CUDA Capable Devices Detected:      1
+|           CUDA Device ID in use:      0
+|                CUDA Device Name: NVIDIA A100-SXM4-40GB
+|     CUDA Device Global Mem Size:  40338 MB
+| CUDA Device Num Multiprocessors:    108
+|           CUDA Device Core Freq:   1.41 GHz
+|
+|--------------------------------------------------------
  
  
 | Conditional Compilation Defines Used:
 | PUBFFT
 | BINTRAJ
+| CUDA
 | EMIL
 
-| Largest sphere to fit in unit cell has radius =    49.977
+| Largest sphere to fit in unit cell has radius =    49.983
 
 | New format PARM file being parsed.
-| Version =    1.000 Date = 05/17/23 Time = 16:49:18
+| Version =    1.000 Date = 06/13/23 Time = 13:27:33
 | ERROR:   natom mismatch in inpcrd/restrt and prmtop files!

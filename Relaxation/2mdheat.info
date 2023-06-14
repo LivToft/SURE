@@ -1,26 +1,8 @@
 
- NSTEP =   451000   TIME(PS) =     451.000  TEMP(K) =   188.97  PRESS =     0.0
- Etot   =   -420606.5359  EKtot   =     49192.7056  EPtot      =   -469799.2415
- BOND   =      1127.8873  ANGLE   =      3065.1639  DIHED      =      7989.7271
- 1-4 NB =      3439.4263  1-4 EEL =     32145.8973  VDWAALS    =     69623.4213
- EELEC  =   -590801.1232  EHBOND  =         0.0000  RESTRAINT  =      3610.3584
- EAMBER (non-restraint)  =   -473409.5999
- Ewald error estimate:   0.2604E-03
+ NSTEP =        0   TIME(PS) =       0.000  TEMP(K) =   146.56  PRESS =     0.0
+ Etot   = -30800423.4500  EKtot   =     38556.4264  EPtot      = -30838979.8764
+ BOND   =     25408.1000  ANGLE   =      7407.4346  DIHED      =      8370.8853
+ 1-4 NB =      5197.6478  1-4 EEL =     34410.6758  VDWAALS    =  46778106.8867
+ EELEC  = -77697881.5066  EHBOND  =         0.0000  RESTRAINT  =         0.0000
  NMR restraints: Bond =    0.000   Angle =     0.000   Torsion =     0.000
 ===============================================================================
- ------------------------------------------------------------------------------
-| Current Timing Info
-| -------------------
-| Total steps:   1000000 | Completed:    451000 ( 45.1%) | Remaining:    549000
-|
-| Average timings for last    1000 steps:
-|     Elapsed(s) =     515.61 Per Step(ms) =     515.61
-|         ns/day =       0.17   seconds/ns =  515607.94
-|
-| Average timings for all steps:
-|     Elapsed(s) =  152540.94 Per Step(ms) =     338.23
-|         ns/day =       0.26   seconds/ns =  338228.24
-|
-|
-| Estimated time remaining:      51.6 hours.
- ------------------------------------------------------------------------------
