@@ -1,0 +1,128 @@
+
+          -------------------------------------------------------
+          Amber 22 SANDER                              2022
+          -------------------------------------------------------
+
+| Run on 06/14/2023 at 11:27:35
+
+|   Executable path: sander
+| Working directory: /Users/livtoft/Desktop/SURE/Relaxation
+|          Hostname: Unknown
+  [-O]verwriting output
+
+File Assignments:
+|  MDIN: simple_min.in                                                         
+| MDOUT: TXS_GGPP_min.out                                                      
+|INPCRD: TXS_GGPP_ion.rst7                                                     
+|  PARM: TXS_GGPP_ion.prmtop                                                   
+|RESTRT: TXS_GGPP_min.ncrst                                                    
+|  REFC: refc                                                                  
+| MDVEL: mdvel                                                                 
+| MDFRC: mdfrc                                                                 
+|  MDEN: mden                                                                  
+| MDCRD: mdcrd                                                                 
+|MDINFO: mdinfo                                                                
+|  MTMD: mtmd                                                                  
+|INPDIP: inpdip                                                                
+|RSTDIP: rstdip                                                                
+|INPTRA: inptraj                                                               
+
+
+ Here is the input file:
+
+Initial minimisation of TXS-substrate complex                                  
+ &cntrl                                                                        
+  imin=1, maxcyc=200, ncyc=50,                                                 
+  cut=16, ntb=0, igb=1,                                                        
+ &end                                                                          
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+| Flags:                                                                        
+| New format PARM file being parsed.
+| Version =    1.000 Date = 06/14/23 Time = 11:20:58
+ NATOM  =  129065 NTYPES =      20 NBONH =  122409 MBONA  =    6524
+ NTHETH =   14166 MTHETA =    8841 NPHIH =   27921 MPHIA  =   21881
+ NHPARM =       0 NPARM  =       0 NNB   =  224790 NRES   =   39792
+ NBONA  =    6524 NTHETA =    8841 NPHIA =   21881 NUMBND =      56
+ NUMANG =     117 NPTRA  =      53 NATYP =      42 NPHB   =       0
+ IFBOX  =       2 NMXRS  =      62 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+ Implicit solvent radii are modified Bondi radii (mbondi)                                                   
+
+|     Memory Use     Allocated
+|     Real            11672737
+|     Hollerith         426989
+|     Integer          2825922
+|     Max Pairs              1
+|     nblistReal             0
+|     nblist Int             0
+|       Total           103899 kbytes
+
+| Note: 1-4 EEL scale factors are being read from the topology file.
+
+| Note: 1-4 VDW scale factors are being read from the topology file.
+| Duplicated    0 dihedrals
+| Duplicated    0 dihedrals
+
+     BOX TYPE: TRUNCATED OCTAHEDRON
+
+--------------------------------------------------------------------------------
+   2.  CONTROL  DATA  FOR  THE  RUN
+--------------------------------------------------------------------------------
+
+default_name                                                                    
+
+General flags:
+     imin    =       1, nmropt  =       0
+
+Nature and format of input:
+     ntx     =       1, irest   =       0, ntrx    =       1
+
+Nature and format of output:
+     ntxo    =       2, ntpr    =      50, ntrx    =       1, ntwr    =       1
+     iwrap   =       0, ntwx    =       0, ntwv    =       0, ntwe    =       0
+     ioutfm  =       1, ntwprt  =       0, idecomp =       0, rbornstat=      0
+
+Potential function:
+     ntf     =       1, ntb     =       0, igb     =       1, nsnb    =      25
+     ipol    =       0, gbsa    =       0, iesp    =       0
+     dielc   =   1.00000, cut     =  16.00000, intdiel =   1.00000
+     saltcon =   0.00000, offset  =   0.09000, gbalpha=    1.00000
+     gbbeta  =   0.00000, gbgamma =   0.00000, surften =   0.00500
+     rdt     =   0.00000, rgbmax  =  25.00000  extdiel =  78.50000
+     alpb  =        0
+
+Frozen or restrained atoms:
+     ibelly  =       0, ntr     =       0
+
+Energy minimization:
+     maxcyc  =     200, ncyc    =      50, ntmin   =       1
+     dx0     =   0.01000, drms    =   0.00010
+|  INFO: Old style inpcrd file read
+
+
+--------------------------------------------------------------------------------
+   3.  ATOMIC COORDINATES AND VELOCITIES
+--------------------------------------------------------------------------------
+
+default_name                                                                    
+ begin time read from input coords =     0.000 ps
+
+ Number of triangulated 3-point waters found:    38725
+
+--------------------------------------------------------------------------------
+   4.  RESULTS
+--------------------------------------------------------------------------------
+
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+      1              NaN            NaN     7.2610E+05     HD11    12463
+
+ BOND    =     4138.9925  ANGLE   =     2350.5106  DIHED      =     7807.7482
+ VDWAALS =           NaN  EEL     =      Infinity  EGB        =   181666.5000
+ 1-4 VDW =     5026.5609  1-4 EEL =    34693.8415  RESTRAINT  =        0.0000

@@ -6,7 +6,7 @@
 | PMEMD implementation of SANDER, Release 22
 
 |  Compiled date/time: Thu Apr 14 14:06:37 2022
-| Run on 05/23/2023 at 20:23:29
+| Run on 06/13/2023 at 14:27:12
 
 |   Executable path: /Applications/amber22/bin/pmemd
 | Working directory: /Users/livtoft/Desktop/SURE/Relaxation
@@ -16,12 +16,12 @@
   [-O]verwriting output
 
 File Assignments:
-|   MDIN: 1min.in                                                               
+|   MDIN: 1min_noQMMM.in                                                        
 |  MDOUT: 1min.out                                                              
-| INPCRD: 3p5r_FGP_ion.inpcrd                                                   
-|   PARM: 3p5r_FGP_ion.prmtop                                                   
+| INPCRD: TXS_GGPP_ion.inpcrd                                                   
+|   PARM: TXS_GGPP_ion.prmtop                                                   
 | RESTRT: 1min.rst7                                                             
-|   REFC: 3p5r_FGP_ion.inpcrd                                                   
+|   REFC: TXS_GGPP_ion.inpcrd                                                   
 |  MDVEL: mdvel                                                                 
 |   MDEN: mden                                                                  
 |  MDCRD: mdcrd.1min                                                            
@@ -44,16 +44,17 @@ minimization of solvent
   ntf = 2,                                                                     
   ntb = 1,                                                                     
   ntp = 0,                                                                     
+  ntc = 1,                                                                     
   cut = 10.0,                                                                  
   ntr=1,                                                                       
-  restraintmask = ':1-791',                                                    
+  restraintmask = ':-4-783',                                                   
   restraint_wt = 100.,                                                         
   ioutfm=1,                                                                    
   ntxo=2,                                                                      
- /                                                                             
+  /                                                                            
 
 
-Note: ig = -1. Setting random seed to   245017 based on wallclock time in 
+Note: ig = -1. Setting random seed to   297396 based on wallclock time in 
       microseconds.
 | irandom = 1, using AMBER's internal random number generator (default).
  
@@ -63,10 +64,10 @@ Note: ig = -1. Setting random seed to   245017 based on wallclock time in
 | BINTRAJ
 | EMIL
 
-| Largest sphere to fit in unit cell has radius =    49.983
+| Largest sphere to fit in unit cell has radius =    50.089
 
 | New format PARM file being parsed.
-| Version =    1.000 Date = 05/17/23 Time = 16:49:18
+| Version =    1.000 Date = 06/13/23 Time = 13:27:33
 
 | Note: 1-4 EEL scale factors are being read from the topology file.
 
@@ -80,16 +81,16 @@ Note: ig = -1. Setting random seed to   245017 based on wallclock time in
 --------------------------------------------------------------------------------
 
  getting new box info from bottom of inpcrd
- NATOM  =  127666 NTYPES =      21 NBONH =  121000 MBONA  =    6542
- NTHETH =   14217 MTHETA =    8867 NPHIH =   28032 MPHIA  =   21951
- NHPARM =       0 NPARM  =       0 NNB   =  223117 NRES   =   39309
- NBONA  =    6542 NTHETA =    8867 NPHIA =   21951 NUMBND =      59
- NUMANG =     122 NPTRA  =      54 NATYP =      45 NPHB   =       0
- IFBOX  =       2 NMXRS  =      65 IFCAP =       0 NEXTRA =       0
+ NATOM  =  129058 NTYPES =      20 NBONH =  122403 MBONA  =    6524
+ NTHETH =   14166 MTHETA =    8841 NPHIH =   27921 MPHIA  =   21881
+ NHPARM =       0 NPARM  =       0 NNB   =  224781 NRES   =   39789
+ NBONA  =    6524 NTHETA =    8841 NPHIA =   21881 NUMBND =      56
+ NUMANG =     117 NPTRA  =      53 NATYP =      42 NPHB   =       0
+ IFBOX  =       2 NMXRS  =      62 IFCAP =       0 NEXTRA =       0
  NCOPY  =       0
 
 | Coordinate Index Table dimensions:    19   19   19
-| Direct force subcell size =     6.4438    6.4438    6.4438
+| Direct force subcell size =     6.4575    6.4575    6.4575
 
      BOX TYPE: TRUNCATED OCTAHEDRON
 
@@ -123,10 +124,6 @@ Energy minimization:
      maxcyc  =    1000, ncyc    =      20, ntmin   =       1
      dx0     =   0.01000, drms    =   0.00010
 
-SHAKE:
-     ntc     =       2, jfastw  =       0
-     tol     =   0.00001
-
 | Intermolecular bonds treatment:
 |     no_intermolecular_bonds =       1
 
@@ -136,7 +133,7 @@ SHAKE:
 Ewald parameters:
      verbose =       0, ew_type =       0, nbflag  =       1, use_pme =       1
      vdwmeth =       1, eedmeth =       1, netfrc  =       0
-     Box X =  122.433   Box Y =  122.433   Box Z =  122.433
+     Box X =  122.692   Box Y =  122.692   Box Z =  122.692
      Alpha =  109.471   Beta  =  109.471   Gamma =  109.471
      NFFT1 =  128       NFFT2 =  125       NFFT3 =  125
      Cutoff=   10.000   Tol   =0.100E-04
@@ -149,7 +146,7 @@ Ewald parameters:
    5.  REFERENCE ATOM COORDINATES
 
   default_name                                                                    
-     Mask :1-791; matches 12654 atoms
+     Mask :-4-783; matches 12486 atoms
 
 --------------------------------------------------------------------------------
    3.  ATOMIC COORDINATES AND VELOCITIES
@@ -159,16 +156,16 @@ default_name
  begin time read from input coords =     0.000 ps
 
  
- Number of triangulated 3-point waters found:    38247
+ Number of triangulated 3-point waters found:    38723
 
-     Sum of charges from parm topology file =   0.00000061
+     Sum of charges from parm topology file =   0.00299762
      Forcing neutrality...
 
 | Dynamic Memory, Types Used:
-| Reals             3470932
-| Integers          4908099
+| Reals             3500766
+| Integers          4929677
 
-| Nonbonded Pairs Initial Allocation:    38615773
+| Nonbonded Pairs Initial Allocation:    39036818
 
 --------------------------------------------------------------------------------
    4.  RESULTS
@@ -192,63 +189,17 @@ default_name
 
 
    NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
-      1      -3.2935E+05     1.1344E+02     8.6576E+03     O       23144
+      1              NaN            NaN     7.2618E+05     HD11    12463
 
- BOND    =      312.0027  ANGLE   =     1530.3088  DIHED      =     7663.8715
- VDWAALS =    64678.3028  EEL     =  -440304.3231  HBOND      =        0.0000
- 1-4 VDW =     3892.0960  1-4 EEL =    32866.6897  RESTRAINT  =        6.6525
- EAMBER  =  -329361.0517
-
-
-   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
-     50      -2.2654E+05     1.4419E+02     4.1984E+04     O        2006
-
- BOND    =    62727.8875  ANGLE   =    20432.1645  DIHED      =     9878.1379
- VDWAALS =    42383.1730  EEL     =  -445742.6605  HBOND      =        0.0000
- 1-4 VDW =     4183.7291  1-4 EEL =    30944.1145  RESTRAINT  =    48656.0274
- EAMBER  =  -275193.4540
-
-
-   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
-    100      -3.4369E+05     3.3219E+01     8.3329E+03     N        2007
-
- BOND    =     5058.3834  ANGLE   =     5609.6025  DIHED      =     8155.3581
- VDWAALS =    24798.7119  EEL     =  -444534.5204  HBOND      =        0.0000
- 1-4 VDW =     5852.4182  1-4 EEL =    31976.1357  RESTRAINT  =    19396.2183
- EAMBER  =  -363083.9105
+ BOND    =      671.6265  ANGLE   =     2350.5107  DIHED      =     7807.7482
+ VDWAALS =           NaN  EEL     =      Infinity  HBOND      =        0.0000
+ 1-4 VDW =     5026.5606  1-4 EEL =    34693.8419  RESTRAINT  =        0.0000
 
      .... RESTARTED DUE TO LINMIN FAILURE ...
 
-
-   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
-    150      -3.5774E+05     1.6406E+01     1.9820E+03     O        2006
-
- BOND    =     1946.3192  ANGLE   =     3603.2550  DIHED      =     7908.8510
- VDWAALS =    22962.3860  EEL     =  -443766.4027  HBOND      =        0.0000
- 1-4 VDW =     3667.7222  1-4 EEL =    32119.7539  RESTRAINT  =    13816.5275
- EAMBER  =  -371558.1155
-
      .... RESTARTED DUE TO LINMIN FAILURE ...
 
-
-   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
-    200      -3.6399E+05     1.6619E+01     1.9798E+03     C        2005
-
- BOND    =     1831.6653  ANGLE   =     2727.9944  DIHED      =     7779.0792
- VDWAALS =    21638.2975  EEL     =  -442089.7469  HBOND      =        0.0000
- 1-4 VDW =     3687.0259  1-4 EEL =    32283.0402  RESTRAINT  =     8149.6503
- EAMBER  =  -372142.6444
-
      .... RESTARTED DUE TO LINMIN FAILURE ...
-
-
-   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
-    250      -3.6837E+05     1.4364E+01     6.0362E+02     C        2005
-
- BOND    =      299.8383  ANGLE   =     2214.8486  DIHED      =     7735.8385
- VDWAALS =    20826.1805  EEL     =  -440851.1215  HBOND      =        0.0000
- 1-4 VDW =     3503.8600  1-4 EEL =    32336.3428  RESTRAINT  =     5563.6416
- EAMBER  =  -373934.2128
 
      .... RESTARTED DUE TO LINMIN FAILURE ...
 
@@ -260,12 +211,12 @@ default_name
 
 
    NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
-    293      -3.6939E+05     1.4025E+01     3.9435E+02     HD2      2738
+     41              NaN            NaN     0.0000E+00     N           1
 
- BOND    =      302.7274  ANGLE   =     1748.4467  DIHED      =     7681.3909
- VDWAALS =    19793.0266  EEL     =  -437925.3904  HBOND      =        0.0000
- 1-4 VDW =     3502.1923  1-4 EEL =    32401.8872  RESTRAINT  =     3101.1561
- EAMBER  =  -372495.7193
+ BOND    =           NaN  ANGLE   =  1547333.8996  DIHED      =        0.0000
+ VDWAALS =    -1898.8205  EEL     =           NaN  HBOND      =        0.0000
+ 1-4 VDW =           NaN  1-4 EEL =           NaN  RESTRAINT  =           NaN
+ EAMBER  =           NaN
 
      ***** REPEATED LINMIN FAILURE *****
 --------------------------------------------------------------------------------
@@ -276,50 +227,50 @@ default_name
 |
 |     Routine           Sec        %
 |     ------------------------------
-|     Nonbond         118.55   98.10
-|     Bond              0.01    0.01
-|     Angle             0.18    0.15
-|     Dihedral          1.18    0.98
-|     Shake             0.43    0.35
-|     Other             0.50    0.41
+|     Nonbond           4.68   96.13
+|     Bond              0.00    0.03
+|     Angle             0.02    0.46
+|     Dihedral          0.08    1.69
+|     Shake             0.00    0.00
+|     Other             0.08    1.68
 |     ------------------------------
-|     Total           120.84
+|     Total             4.87
 
 |  PME Nonbond Pairlist CPU Time:
 |
 |     Routine              Sec        %
 |     ---------------------------------
-|     Set Up Cit           0.13    0.11
-|     Build List          29.95   24.78
+|     Set Up Cit           0.00    0.04
+|     Build List           0.36    7.29
 |     ---------------------------------
-|     Total               30.08   24.89
+|     Total                0.36    7.32
 
 |  PME Direct Force CPU Time:
 |
 |     Routine              Sec        %
 |     ---------------------------------
-|     NonBonded Calc      68.64   56.80
-|     Exclude Masked       0.56    0.47
-|     Other                0.41    0.34
+|     NonBonded Calc       1.74   35.79
+|     Exclude Masked       0.07    1.50
+|     Other                0.06    1.15
 |     ---------------------------------
-|     Total               69.61   57.60
+|     Total                1.87   38.44
 
 |  PME Reciprocal Force CPU Time:
 |
 |     Routine              Sec        %
 |     ---------------------------------
-|     1D bspline           1.32    1.09
-|     Grid Charges         1.48    1.23
-|     Scalar Sum           5.62    4.65
-|     Gradient Sum         2.86    2.37
-|     FFT                  7.55    6.24
+|     1D bspline           0.17    3.58
+|     Grid Charges         0.18    3.78
+|     Scalar Sum           0.74   15.10
+|     Gradient Sum         0.37    7.53
+|     FFT                  0.99   20.26
 |     ---------------------------------
-|     Total               18.83   15.58
+|     Total                2.45   50.26
 
-|  Setup CPU time:            0.30 seconds
-|  NonSetup CPU time:       120.84 seconds
-|  Total CPU time:          121.14 seconds     0.03 hours
+|  Setup CPU time:            0.31 seconds
+|  NonSetup CPU time:         4.87 seconds
+|  Total CPU time:            5.18 seconds     0.00 hours
 
 |  Setup wall time:           1    seconds
-|  NonSetup wall time:      123    seconds
-|  Total wall time:         124    seconds     0.03 hours
+|  NonSetup wall time:        5    seconds
+|  Total wall time:           6    seconds     0.00 hours
