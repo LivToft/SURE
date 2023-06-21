@@ -1,0 +1,104 @@
+
+CPPTRAJ: Trajectory Analysis. V6.18.1 (AmberTools)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 06/21/23 14:27:40
+| Available memory: 186.510 MB
+
+INPUT: Reading input from 'netCDF_to_pdb.in'
+  [parm TXS_GGPP_ion.prmtop]
+	Reading 'TXS_GGPP_ion.prmtop' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+  [trajin 9md.rst7]
+	Reading '9md.rst7' as Amber NC Restart
+  [trajout TXS_GGPP_inH2O.pdb PDB]
+	Writing 'TXS_GGPP_inH2O.pdb' as PDB
+  [center :1-788]
+    CENTER: Centering coordinates using geometric center of atoms in mask (:1-788) to
+	box center.
+  [image familiar]
+    IMAGE: By molecule to box center based on first atom position using all atoms
+           Triclinic On, familiar shape.
+  [go]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: TXS_GGPP_ion.prmtop, 129112 atoms, 39809 res, box: Truncated octahedron, 39026 mol, 38741 solvent
+
+INPUT TRAJECTORIES (1 total):
+ 0: '9md.rst7' is a NetCDF AMBER restart file with coordinates, velocities, time, box, Parm TXS_GGPP_ion.prmtop (Truncated octahedron box) (reading 1 of 1)
+  Coordinate processing will occur on 1 frames.
+
+OUTPUT TRAJECTORIES (1 total):
+  'TXS_GGPP_inH2O.pdb' (1 frames) is a PDB file
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM 'TXS_GGPP_ion.prmtop' (2 actions):
+  0: [center :1-788]
+	Mask [:1-788] corresponds to 12609 atoms.
+  1: [image familiar]
+	Mask [*] corresponds to 129112 atoms.
+	Number of molecules to be imaged is 39026
+Warning: No PDB space group specified.
+.....................................................
+ACTIVE OUTPUT TRAJECTORIES (1):
+  TXS_GGPP_inH2O.pdb (coordinates, velocities, time, box)
+----- 9md.rst7 (1-1, 1) -----
+100% Complete.
+
+Read 1 frames and processed 1 frames.
+TIME: Avg. throughput= 7.4284 frames / second.
+
+ACTION OUTPUT:
+TIME: Analyses took 0.0000 seconds.
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.01%)
+TIME:		Trajectory Process : 0.1346 s ( 99.46%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0000 s (  0.00%)
+TIME:		Other              : 0.0007 s (  0.01%)
+TIME:	Run Total 0.1354 s
+---------- RUN END ---------------------------------------------------
+  [readdata 3md.out 4md.out 6md.out name MyOutput]
+	Reading '3md.out' as Amber MDOUT file with name 'MyOutput'
+	Reading from mdout file: 3md.out
+	1000 frames
+	Reading from mdout file: 4md.out
+	1000 frames
+	Reading from mdout file: 6md.out
+	1001 frames
+  [list datasets]
+
+DATASETS (16 total):
+	TXS_GGPP_ion.prmtop "TXS_GGPP_ion.prmtop" (topology), size is 129112 TXS_GGPP_ion.prmtop, 129112 atoms, 39809 res, box: Truncated octahedron, 39026 mol, 38741 solvent
+	MyOutput[Etot] "MyOutput_Etot" (double), size is 3001 (24.008 kB)
+	MyOutput[EPtot] "MyOutput_EPtot" (double), size is 3001 (24.008 kB)
+	MyOutput[BOND] "MyOutput_BOND" (double), size is 3001 (24.008 kB)
+	MyOutput[ANGLE] "MyOutput_ANGLE" (double), size is 3001 (24.008 kB)
+	MyOutput[DIHED] "MyOutput_DIHED" (double), size is 3001 (24.008 kB)
+	MyOutput[VDW] "MyOutput_VDW" (double), size is 3001 (24.008 kB)
+	MyOutput[EELEC] "MyOutput_EELEC" (double), size is 3001 (24.008 kB)
+	MyOutput[VDW1-4] "MyOutput_VDW1-4" (double), size is 3001 (24.008 kB)
+	MyOutput[EEL1-4] "MyOutput_EEL1-4" (double), size is 3001 (24.008 kB)
+	MyOutput[RST] "MyOutput_RST" (double), size is 3001 (24.008 kB)
+	MyOutput[Density] "MyOutput_Density" (double), size is 3001 (24.008 kB)
+	MyOutput[EKtot] "MyOutput_EKtot" (double), size is 3001 (24.008 kB)
+	MyOutput[VOLUME] "MyOutput_VOLUME" (double), size is 3001 (24.008 kB)
+	MyOutput[TEMP] "MyOutput_TEMP" (double), size is 3001 (24.008 kB)
+	MyOutput[PRESS] "MyOutput_PRESS" (double), size is 3001 (24.008 kB)
+    Total data set memory usage is at least 360.120 kB
+  [writedata Density.agr MyOutput[Density]]
+	Writing sets to Density.agr, format 'Grace File'
+ MyOutput_Density
+TIME: Total execution time: 0.2388 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+
