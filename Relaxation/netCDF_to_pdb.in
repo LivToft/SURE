@@ -1,0 +1,3 @@
+parm TXS_GGPP_ion.prmtop
+trajin 4md.rst7
+trajout TXS_GGPP_inH2O.pdb PDB
