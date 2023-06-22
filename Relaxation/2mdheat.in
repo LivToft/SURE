@@ -22,7 +22,7 @@
   ntp = 0,
   nscm = 0,
   ntr=1,
-  restraintmask=':-4-783',
+  restraintmask=':1-789',
   restraint_wt=100.0
   nmropt=1,
   ioutfm=1,

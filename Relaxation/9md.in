@@ -8,12 +8,4 @@
   ntt =3, gamma_ln=1.0, ntb = 2, ntp = 1,
   nscm = 1000, barostat = 2,
   ioutfm=1, ntxo=2,
-  ifqnt=1
  /
- &qmmm
-  qmmask=':780-783',
-  qmcharge=3,
-  qm_theory='PM3',
-  qmshake=1,
-  qm_ewald=1, qm_pme=1
-  /
