@@ -1,11 +1,8 @@
 parm TXS_GGPP_ion.prmtop
-trajin 9md.rst7
+trajin TXS_GGPP_relaxed.rst7
 trajout TXS_GGPP_inH2O.pdb PDB
 
-center :1-788
+center :1-789
 image familiar
 go
 
-readdata 3md.out 4md.out 6md.out name MyOutput
-list datasets
-writedata Density.agr MyOutput[Density]
