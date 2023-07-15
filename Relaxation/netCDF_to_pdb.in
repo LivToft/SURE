@@ -1,8 +1,8 @@
-parm TXS_GGPP_ion.prmtop
-trajin TXS_GGPP_relaxed.rst7
-trajout TXS_GGPP_inH2O.pdb PDB
+parm TXS_GGPP/TXS_GGPP_ion.prmtop
+trajin TXS_GGPP/TXS_GGPP_relaxed.rst7
+trajout TXS_GGPP/TXS_GGPP_relaxed.pdb PDB
 
-center :1-789
+center :1-788
 image familiar
 go
 
