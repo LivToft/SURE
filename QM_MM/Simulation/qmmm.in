@@ -1,0 +1,36 @@
+QM/MM MD simulation
+ &cntrl
+  imin = 0		! No minimization
+  irest = 1		! Simulation is restarted from a previous simulation
+  ntx = 5		! Coordinates, velocities, and box information is read from a previous simulation
+  ntb = 2		! Periodic Boundary Conditions in the NPT ensemble (V is allowed to change)
+  ntp = 1		! Isoptropic scaling of volume
+  barostat = 1		! Berendsen barostat
+  pres0 = 1.0 		! Pressure in bars
+  taup = 2.0		! Relaxation time in ps
+  cut = 9.0 		! Cutoff for Lennard-Jones and real-space Ewald interactions
+  ntc = 2		! Bonds involving hydrogen atoms are constrained
+  ntf = 2		! Bond interactions involving hydrogen are not computed
+  tempi = 300.0   	! Initial temperature
+  temp0 = 300.0   	! Final temperature
+  ntt = 3		! Langevin thermostat
+  gamma_ln = 1.0  	! Collision frequency in ps-1
+  ig = -1		! Default for Langevin thermostat (ntt=3)
+  nstlim = 10000	! Number of time steps
+  dt = 0.002		! Time step in ps
+  ntpr = 100		! Energy printed every N steps
+  ntwx = 100		! Energy is printed every N steps
+  ntwr = 100		! Restart file is printed every N steps
+  ntxo = 2		! NetCDF format for final coordinates
+  ioutfm = 1		! Binary NetCDF trajectory format of coordinate and velocity trajectory files
+  iwrap = 1		! Coordinates written to the restart and traj files will be "wrapped" into a primary box
+  ifqnt = 1		! QM/MM
+ /
+ &qmmm
+  qmmask = ':785-788'	! Residues in the QM region
+  qmcharge = 3		! Charge on the QM system
+  qm_theory = 'PM3'	! Density functional theory used for QM region
+  qmshake = 1 		! Shake QM H atoms
+  qm_ewald = 1		! Use PME or an Ewald sum to calculate long range QM-QM OR QM-MM electrostatic interactions (default for QM/MM with periodic boundaries and PME)
+  qm_pme = 1		! Use a QM compatible PME approach to calculate the long range QM-MM electrostatic energies and forces and the long range QM-QM forces
+ /
